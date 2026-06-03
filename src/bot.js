@@ -4,7 +4,7 @@ import { saveUrl, getUrl } from "./config.js";
 
 dotenv.config();
 const BOT_TOKEN = "8968549054:AAFMnSz5jW4uWSSl57AtxgwD-6VtKsLSaHs"
-const CHAT_ID = "8608001613"
+const CHAT_ID = "721130531"
 
 const bot = new TelegramBot(
     BOT_TOKEN,
