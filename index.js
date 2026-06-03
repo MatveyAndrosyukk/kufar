@@ -1,35 +1,9 @@
 import axios from "axios";
-import { sendMessage } from "./src/bot.js";
-import { getSeenIds, saveSeenIds } from "./src/storage.js";
-import { getUrl } from "./src/config.js";
 import express from "express";
 
-let seenIds = new Set();
-
-async function firstLoad() {
-    const url = await getUrl();
-
-    if (!url) {
-        console.log("URL не настроен");
-        return;
-    }
-
-    const response = await axios.get(url);
-
-    console.log("Ответ получен");
-
-    const ads = response.data.ads ?? [];
-
-    console.log("Объявлений:", ads.length);
-
-    for (const ad of ads) {
-        seenIds.add(ad.ad_id);
-    }
-
-    await saveSeenIds(seenIds);
-
-    console.log(`Первичная загрузка: ${ads.length} объявлений`);
-}
+import { sendMessage } from "./src/bot.js";
+import { getUrl } from "./src/config.js";
+import { isSeen, markSeen } from "./src/storage.js";
 
 async function checkAds() {
     console.log("Проверяю объявления...");
@@ -46,49 +20,86 @@ async function checkAds() {
 
         const ads = response.data.ads ?? [];
 
+        console.log(`Получено объявлений: ${ads.length}`);
+
         for (const ad of ads) {
-            if (seenIds.has(ad.ad_id)) {
+
+            const alreadySeen = await isSeen(ad.ad_id);
+
+            if (alreadySeen) {
                 continue;
             }
 
-            seenIds.add(ad.ad_id);
+            await markSeen(ad.ad_id);
 
             const message =
-                `🏠 Новое объявление
-
-${ad.subject}
-
-💵 ${ad.price_usd}$
-
-🔗 ${ad.ad_link}`;
+                `🏠 Новое объявление\n\n` +
+                `${ad.subject}\n\n` +
+                `💵 ${ad.price_usd}$\n\n` +
+                `🔗 ${ad.ad_link}`;
 
             await sendMessage(message);
 
             console.log(`Новое объявление: ${ad.ad_id}`);
         }
 
-        await saveSeenIds(seenIds);
-
     } catch (error) {
-        console.error("Ошибка проверки:", error.message);
+        console.error(
+            "Ошибка проверки:",
+            error.response?.data || error.message
+        );
     }
 }
 
-async function start() {
-    console.log("Запуск бота...");
-
-    seenIds = await getSeenIds();
+async function firstLoad() {
 
     const url = await getUrl();
 
-    console.log("URL:", url);
-    console.log("seenIds:", seenIds.size);
+    if (!url) {
+        return;
+    }
+
+    const response = await axios.get(url);
+
+    const ads = response.data.ads ?? [];
+
+    for (const ad of ads) {
+        await markSeen(ad.ad_id);
+    }
+
+    console.log(
+        `Первичная загрузка завершена. Сохранено ${ads.length} объявлений`
+    );
+}
+
+async function start() {
+
+    console.log("Запуск бота...");
+
+    const url = await getUrl();
+
+    console.log("Текущий URL:", url);
 
     if (!url) {
-        console.log("URL пока не задан.");
-        console.log("Открой Telegram → /start → 🔗 Изменить URL");
-    } else if (seenIds.size === 0) {
-        await firstLoad();
+        console.log(
+            "Открой Telegram → /start → 🔗 Изменить URL"
+        );
+        return;
+    }
+
+    const response = await axios.get(url);
+
+    const ads = response.data.ads ?? [];
+
+    if (ads.length > 0) {
+
+        const firstAd = ads[0];
+
+        const exists = await isSeen(firstAd.ad_id);
+
+        if (!exists) {
+            await firstLoad();
+        }
     }
 
     await checkAds();
@@ -106,8 +117,10 @@ app.get("/", (req, res) => {
     res.send("Kufar bot is alive");
 });
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-    console.log(`HTTP сервер запущен на порту ${PORT}`);
+    console.log(
+        `HTTP сервер запущен на порту ${PORT}`
+    );
 });

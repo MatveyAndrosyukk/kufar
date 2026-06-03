@@ -1,10 +1,10 @@
 import TelegramBot from "node-telegram-bot-api";
 import dotenv from "dotenv";
 import { saveUrl, getUrl } from "./config.js";
+import { addSubscriber, getSubscribers } from "./subscribers.js";
 
 dotenv.config();
 const BOT_TOKEN = "8968549054:AAFMnSz5jW4uWSSl57AtxgwD-6VtKsLSaHs"
-const CHAT_ID = "721130531"
 
 const bot = new TelegramBot(
     BOT_TOKEN,
@@ -16,9 +16,12 @@ const bot = new TelegramBot(
 let waitingForUrl = false;
 
 bot.onText(/\/start/, async (msg) => {
+
+    await addSubscriber(msg.chat.id);
+
     await bot.sendMessage(
         msg.chat.id,
-        "Управление мониторингом Kufar",
+        "✅ Вы подписаны на уведомления Kufar",
         {
             reply_markup: {
                 keyboard: [
@@ -80,8 +83,19 @@ bot.on("message", async (msg) => {
 });
 
 export async function sendMessage(text) {
-    await bot.sendMessage(
-        CHAT_ID,
-        text
-    );
+
+    const subscribers = await getSubscribers();
+
+    for (const user of subscribers) {
+        try {
+            await bot.sendMessage(
+                user.chat_id,
+                text
+            );
+        } catch (error) {
+            console.log(
+                `Не удалось отправить ${user.chat_id}`
+            );
+        }
+    }
 }

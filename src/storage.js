@@ -1,38 +1,21 @@
-import fs from "fs/promises";
+import { supabase } from "./db.js";
 
-const FILE = "./seen.json";
+export async function isSeen(adId) {
 
-export async function getSeenIds() {
-    try {
-        const raw = await fs.readFile(FILE, "utf8");
-        const data = JSON.parse(raw);
+    const { data } = await supabase
+        .from("seen_ads")
+        .select("ad_id")
+        .eq("ad_id", adId)
+        .maybeSingle();
 
-        return new Set(data.ids || []);
-    } catch {
-        await fs.writeFile(
-            FILE,
-            JSON.stringify(
-                {
-                    ids: []
-                },
-                null,
-                2
-            )
-        );
-
-        return new Set();
-    }
+    return !!data;
 }
 
-export async function saveSeenIds(ids) {
-    await fs.writeFile(
-        FILE,
-        JSON.stringify(
-            {
-                ids: [...ids]
-            },
-            null,
-            2
-        )
-    );
+export async function markSeen(adId) {
+
+    await supabase
+        .from("seen_ads")
+        .upsert({
+            ad_id: adId
+        });
 }
