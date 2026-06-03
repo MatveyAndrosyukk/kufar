@@ -31,6 +31,10 @@ bot.onText(/\/start/, async (msg) => {
     );
 });
 
+bot.on("message", (msg) => {
+    console.log("CHAT ID:", msg.chat.id);
+});
+
 bot.on("message", async (msg) => {
     const text = msg.text;
 
