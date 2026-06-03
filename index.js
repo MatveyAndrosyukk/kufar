@@ -35,7 +35,6 @@ async function checkAds() {
             const message =
                 `🏠 Новое объявление\n\n` +
                 `${ad.subject}\n\n` +
-                `💵 ${ad.price_usd}$\n\n` +
                 `🔗 ${ad.ad_link}`;
 
             await sendMessage(message);
