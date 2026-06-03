@@ -2,6 +2,7 @@ import axios from "axios";
 import { sendMessage } from "./src/bot.js";
 import { getSeenIds, saveSeenIds } from "./src/storage.js";
 import { getUrl } from "./src/config.js";
+import express from "express";
 
 let seenIds = new Set();
 
@@ -98,3 +99,15 @@ async function start() {
 }
 
 start();
+
+const app = express();
+
+app.get("/", (req, res) => {
+    res.send("Kufar bot is alive");
+});
+
+const PORT = 3000;
+
+app.listen(PORT, () => {
+    console.log(`HTTP сервер запущен на порту ${PORT}`);
+});
