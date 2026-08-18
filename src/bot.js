@@ -13,7 +13,8 @@ import {
 
 dotenv.config();
 
-const BOT_TOKEN = process.env.BOT_TOKEN;
+const BOT_TOKEN =
+    process.env.BOT_TOKEN;
 
 const bot = new TelegramBot(
     BOT_TOKEN,
@@ -22,12 +23,14 @@ const bot = new TelegramBot(
     }
 );
 
+
 bot.setMyCommands([
     {
         command: "start",
         description: "Запустить бота"
     }
 ]);
+
 
 const mainKeyboard = {
     reply_markup: {
@@ -52,11 +55,13 @@ async function sendUserMessage(
     text,
     options = {}
 ) {
-    const message = await bot.sendMessage(
-        chatId,
-        text,
-        options
-    );
+
+    const message =
+        await bot.sendMessage(
+            chatId,
+            text,
+            options
+        );
 
     await saveBotMessage(
         chatId,
@@ -73,8 +78,14 @@ async function sendUserMessage(
  * =====================================================
  */
 
-async function clearChat(chatId) {
-    const messages = await getBotMessages(chatId);
+async function clearChat(
+    chatId
+) {
+
+    const messages =
+        await getBotMessages(
+            chatId
+        );
 
     console.log(
         "================================="
@@ -99,8 +110,12 @@ async function clearChat(chatId) {
         "================================="
     );
 
-    for (const message of messages) {
+    for (
+        const message of messages
+        ) {
+
         try {
+
             console.log(
                 "Удаляю message_id:",
                 message.message_id
@@ -117,6 +132,7 @@ async function clearChat(chatId) {
             );
 
         } catch (error) {
+
             console.log(
                 "Ошибка удаления:",
                 message.message_id,
@@ -125,7 +141,9 @@ async function clearChat(chatId) {
         }
     }
 
-    await deleteBotMessages(chatId);
+    await deleteBotMessages(
+        chatId
+    );
 
     console.log(
         "Записи о сообщениях удалены из БД"
@@ -139,18 +157,21 @@ async function clearChat(chatId) {
  * =====================================================
  */
 
-bot.onText(/\/start/, async (msg) => {
+bot.onText(
+    /\/start/,
+    async (msg) => {
 
-    await addSubscriber(
-        msg.chat.id
-    );
+        await addSubscriber(
+            msg.chat.id
+        );
 
-    await sendUserMessage(
-        msg.chat.id,
-        "✅ Вы подписаны на уведомления Kufar",
-        mainKeyboard
-    );
-});
+        await sendUserMessage(
+            msg.chat.id,
+            "✅ Вы подписаны на уведомления Kufar",
+            mainKeyboard
+        );
+    }
+);
 
 
 /*
@@ -159,14 +180,16 @@ bot.onText(/\/start/, async (msg) => {
  * =====================================================
  */
 
-bot.on("message", (msg) => {
+bot.on(
+    "message",
+    (msg) => {
 
-    console.log(
-        "CHAT ID:",
-        msg.chat.id
-    );
-
-});
+        console.log(
+            "CHAT ID:",
+            msg.chat.id
+        );
+    }
+);
 
 
 /*
@@ -175,222 +198,261 @@ bot.on("message", (msg) => {
  * =====================================================
  */
 
-bot.on("message", async (msg) => {
+bot.on(
+    "message",
+    async (msg) => {
 
-    const text = msg.text;
+        const text =
+            msg.text;
 
-    if (!text) {
-        return;
-    }
-
-
-    /*
-     * =================================================
-     * ОЧИСТИТЬ ЧАТ
-     * =================================================
-     */
-
-    if (text === "🧹 Очистить чат") {
-
-        /*
-         * Удаляем сообщение пользователя
-         * с кнопкой очистки.
-         */
-        try {
-
-            await bot.deleteMessage(
-                msg.chat.id,
-                msg.message_id
-            );
-
-        } catch (error) {
-
-            console.log(
-                "Не удалось удалить сообщение пользователя"
-            );
-
+        if (!text) {
+            return;
         }
 
 
         /*
-         * Удаляем все сообщения бота,
-         * которые сохранены в Supabase.
+         * =================================================
+         * ОЧИСТИТЬ ЧАТ
+         * =================================================
          */
 
-        await clearChat(
-            msg.chat.id
-        );
+        if (
+            text === "🧹 Очистить чат"
+        ) {
+
+            try {
+
+                await bot.deleteMessage(
+                    msg.chat.id,
+                    msg.message_id
+                );
+
+            } catch (error) {
+
+                console.log(
+                    "Не удалось удалить сообщение пользователя"
+                );
+            }
+
+
+            await clearChat(
+                msg.chat.id
+            );
+
+
+            await sendUserMessage(
+                msg.chat.id,
+                "🧹 Чат очищен.",
+                mainKeyboard
+            );
+
+            return;
+        }
 
 
         /*
-         * Показываем новое меню.
+         * =================================================
+         * ВЫБРАТЬ МОНИТОРИНГ
+         * =================================================
          */
 
-        await sendUserMessage(
-            msg.chat.id,
-            "🧹 Чат очищен.",
-            mainKeyboard
-        );
+        if (
+            text === "📡 Выбрать мониторинг"
+        ) {
 
-        return;
+            await sendUserMessage(
+                msg.chat.id,
+
+                "Выберите, что мониторить:\n\n" +
+                "1 — 🏠 Квартиры Брест\n" +
+                "2 — 📺 Телевизоры\n" +
+                "3 — 🚲 Велосипеды\n" +
+                "4 — 🏠 Квартиры Гродно"
+            );
+
+            return;
+        }
+
+
+        /*
+         * =================================================
+         * КВАРТИРЫ БРЕСТ
+         * =================================================
+         */
+
+        if (text === "1") {
+
+            await setMonitoringType(
+                msg.chat.id,
+                "apartments"
+            );
+
+            await setMonitoringActive(
+                msg.chat.id,
+                true
+            );
+
+            await sendUserMessage(
+                msg.chat.id,
+
+                "🏠 Выбран мониторинг квартир Брест.\n\n" +
+                "▶️ Мониторинг запущен.",
+
+                mainKeyboard
+            );
+
+            return;
+        }
+
+
+        /*
+         * =================================================
+         * ТЕЛЕВИЗОРЫ
+         * =================================================
+         */
+
+        if (text === "2") {
+
+            await setMonitoringType(
+                msg.chat.id,
+                "tv"
+            );
+
+            await setMonitoringActive(
+                msg.chat.id,
+                true
+            );
+
+            await sendUserMessage(
+                msg.chat.id,
+
+                "📺 Выбран мониторинг телевизоров.\n\n" +
+                "▶️ Мониторинг запущен.",
+
+                mainKeyboard
+            );
+
+            return;
+        }
+
+
+        /*
+         * =================================================
+         * ВЕЛОСИПЕДЫ
+         * =================================================
+         */
+
+        if (text === "3") {
+
+            await setMonitoringType(
+                msg.chat.id,
+                "bicycles"
+            );
+
+            await setMonitoringActive(
+                msg.chat.id,
+                true
+            );
+
+            await sendUserMessage(
+                msg.chat.id,
+
+                "🚲 Выбран мониторинг велосипедов.\n\n" +
+                "▶️ Мониторинг запущен.",
+
+                mainKeyboard
+            );
+
+            return;
+        }
+
+
+        /*
+         * =================================================
+         * КВАРТИРЫ ГРОДНО
+         * =================================================
+         */
+
+        if (text === "4") {
+
+            await setMonitoringType(
+                msg.chat.id,
+                "apartments_grodno"
+            );
+
+            await setMonitoringActive(
+                msg.chat.id,
+                true
+            );
+
+            await sendUserMessage(
+                msg.chat.id,
+
+                "🏠 Выбран мониторинг квартир Гродно.\n\n" +
+                "▶️ Мониторинг запущен.",
+
+                mainKeyboard
+            );
+
+            return;
+        }
+
+
+        /*
+         * =================================================
+         * СТАРТ
+         * =================================================
+         */
+
+        if (
+            text === "▶️ Старт"
+        ) {
+
+            await setMonitoringActive(
+                msg.chat.id,
+                true
+            );
+
+            await sendUserMessage(
+                msg.chat.id,
+
+                "▶️ Мониторинг запущен.",
+
+                mainKeyboard
+            );
+
+            return;
+        }
+
+
+        /*
+         * =================================================
+         * СТОП
+         * =================================================
+         */
+
+        if (
+            text === "⏹ Стоп"
+        ) {
+
+            await setMonitoringActive(
+                msg.chat.id,
+                false
+            );
+
+            await sendUserMessage(
+                msg.chat.id,
+
+                "⏹ Мониторинг остановлен.",
+
+                mainKeyboard
+            );
+
+            return;
+        }
+
     }
-
-
-    /*
-     * =================================================
-     * ВЫБРАТЬ МОНИТОРИНГ
-     * =================================================
-     */
-
-    if (
-        text === "📡 Выбрать мониторинг"
-    ) {
-
-        await sendUserMessage(
-            msg.chat.id,
-            "Выберите, что мониторить:\n\n" +
-            "1 — 🏠 Квартиры\n" +
-            "2 — 📺 Телевизоры\n" +
-            "3 — 🚲 Велосипеды"
-        );
-
-        return;
-    }
-
-
-    /*
-     * =================================================
-     * КВАРТИРЫ
-     * =================================================
-     */
-
-    if (text === "1") {
-
-        await setMonitoringType(
-            msg.chat.id,
-            "apartments"
-        );
-
-        await setMonitoringActive(
-            msg.chat.id,
-            true
-        );
-
-        await sendUserMessage(
-            msg.chat.id,
-            "🏠 Выбран мониторинг квартир.\n\n" +
-            "▶️ Мониторинг запущен.",
-            mainKeyboard
-        );
-
-        return;
-    }
-
-
-    /*
-     * =================================================
-     * ТЕЛЕВИЗОРЫ
-     * =================================================
-     */
-
-    if (text === "2") {
-
-        await setMonitoringType(
-            msg.chat.id,
-            "tv"
-        );
-
-        await setMonitoringActive(
-            msg.chat.id,
-            true
-        );
-
-        await sendUserMessage(
-            msg.chat.id,
-            "📺 Выбран мониторинг телевизоров.\n\n" +
-            "▶️ Мониторинг запущен.",
-            mainKeyboard
-        );
-
-        return;
-    }
-
-
-    /*
-     * =================================================
-     * ВЕЛОСИПЕДЫ
-     * =================================================
-     */
-
-    if (text === "3") {
-
-        await setMonitoringType(
-            msg.chat.id,
-            "bicycles"
-        );
-
-        await setMonitoringActive(
-            msg.chat.id,
-            true
-        );
-
-        await sendUserMessage(
-            msg.chat.id,
-            "🚲 Выбран мониторинг велосипедов.\n\n" +
-            "▶️ Мониторинг запущен.",
-            mainKeyboard
-        );
-
-        return;
-    }
-
-
-    /*
-     * =================================================
-     * СТАРТ
-     * =================================================
-     */
-
-    if (text === "▶️ Старт") {
-
-        await setMonitoringActive(
-            msg.chat.id,
-            true
-        );
-
-        await sendUserMessage(
-            msg.chat.id,
-            "▶️ Мониторинг запущен.",
-            mainKeyboard
-        );
-
-        return;
-    }
-
-
-    /*
-     * =================================================
-     * СТОП
-     * =================================================
-     */
-
-    if (text === "⏹ Стоп") {
-
-        await setMonitoringActive(
-            msg.chat.id,
-            false
-        );
-
-        await sendUserMessage(
-            msg.chat.id,
-            "⏹ Мониторинг остановлен.",
-            mainKeyboard
-        );
-
-        return;
-    }
-
-});
+);
 
 
 /*
@@ -407,24 +469,32 @@ export async function sendMessage(
     const subscribers =
         await getSubscribers();
 
-    for (const user of subscribers) {
+    for (
+        const user of subscribers
+        ) {
 
         /*
          * Мониторинг выключен
          */
-        if (!user.is_active) {
+
+        if (
+            !user.is_active
+        ) {
             continue;
         }
+
 
         /*
          * Другой тип мониторинга
          */
+
         if (
             user.monitoring_type !==
             monitoringType
         ) {
             continue;
         }
+
 
         try {
 
@@ -451,7 +521,6 @@ export async function sendMessage(
                 `Не удалось отправить ${user.chat_id}`,
                 error.message
             );
-
         }
     }
 }

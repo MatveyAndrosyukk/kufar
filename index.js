@@ -6,7 +6,7 @@ import { isSeen, markSeen } from "./src/storage.js";
 
 const MONITORING = {
     apartments: {
-        name: "квартиры",
+        name: "квартиры Брест",
         emoji: "🏠",
         url: "https://api.kufar.by/search-api/v2/search/rendered-paginated?cat=1010&cur=BYR&gtsy=country-belarus~province-brestskaja_oblast~locality-brest&lang=ru&prc=r%3A0%2C60000&size=30&typ=let"
     },
@@ -21,8 +21,15 @@ const MONITORING = {
         name: "велосипеды",
         emoji: "🚲",
         url: "https://api.kufar.by/search-api/v2/search/rendered-paginated?ar=1&cursor=eyJ0IjoiYWJzIiwiZiI6dHJ1ZSwicCI6MiwicGl0IjoiMjk3NzIzOTAifQ%3D%3D&lang=ru&query=%D0%92%D0%B5%D0%BB%D0%BE%D1%81%D0%B8%D0%BF%D0%B5%D0%B4&rgn=1&size=43&sort=lst.d"
+    },
+
+    apartments_grodno: {
+        name: "квартиры Гродно",
+        emoji: "🏠",
+        url: "https://api.kufar.by/search-api/v2/search/rendered-paginated?cat=1010&cur=BYR&gtsy=country-belarus~province-grodnenskaja_oblast~locality-grodno&lang=ru&prc=r%3A0%2C60100&size=30&typ=let"
     }
 };
+
 
 async function getAds(url) {
     const response = await axios.get(url);
@@ -30,7 +37,11 @@ async function getAds(url) {
     return response.data.ads ?? [];
 }
 
-async function firstLoad(monitoringType, url) {
+
+async function firstLoad(
+    monitoringType,
+    url
+) {
     try {
         const ads = await getAds(url);
 
@@ -42,7 +53,9 @@ async function firstLoad(monitoringType, url) {
             `[${monitoringType}] Первичная загрузка завершена. ` +
             `Сохранено ${ads.length} объявлений`
         );
+
     } catch (error) {
+
         console.error(
             `[${monitoringType}] Ошибка первичной загрузки:`,
             error.response?.data || error.message
@@ -50,26 +63,38 @@ async function firstLoad(monitoringType, url) {
     }
 }
 
-async function checkAds(monitoringType, config) {
+
+async function checkAds(
+    monitoringType,
+    config
+) {
     console.log(
         `[${monitoringType}] Проверяю объявления...`
     );
 
     try {
-        const ads = await getAds(config.url);
+
+        const ads = await getAds(
+            config.url
+        );
 
         console.log(
             `[${monitoringType}] Получено объявлений: ${ads.length}`
         );
 
         for (const ad of ads) {
-            const alreadySeen = await isSeen(ad.ad_id);
+
+            const alreadySeen = await isSeen(
+                ad.ad_id
+            );
 
             if (alreadySeen) {
                 continue;
             }
 
-            await markSeen(ad.ad_id);
+            await markSeen(
+                ad.ad_id
+            );
 
             const description =
                 ad.body ||
@@ -91,7 +116,9 @@ async function checkAds(monitoringType, config) {
                 `[${monitoringType}] Новое объявление: ${ad.ad_id}`
             );
         }
+
     } catch (error) {
+
         console.error(
             `[${monitoringType}] Ошибка проверки:`,
             error.response?.data || error.message
@@ -99,11 +126,19 @@ async function checkAds(monitoringType, config) {
     }
 }
 
-async function prepareMonitoring(monitoringType, config) {
+
+async function prepareMonitoring(
+    monitoringType,
+    config
+) {
     try {
-        const ads = await getAds(config.url);
+
+        const ads = await getAds(
+            config.url
+        );
 
         if (ads.length === 0) {
+
             console.log(
                 `[${monitoringType}] API вернул 0 объявлений`
             );
@@ -113,9 +148,12 @@ async function prepareMonitoring(monitoringType, config) {
 
         const firstAd = ads[0];
 
-        const exists = await isSeen(firstAd.ad_id);
+        const exists = await isSeen(
+            firstAd.ad_id
+        );
 
         if (!exists) {
+
             await firstLoad(
                 monitoringType,
                 config.url
@@ -126,7 +164,9 @@ async function prepareMonitoring(monitoringType, config) {
             monitoringType,
             config
         );
+
     } catch (error) {
+
         console.error(
             `[${monitoringType}] Ошибка запуска:`,
             error.response?.data || error.message
@@ -134,10 +174,18 @@ async function prepareMonitoring(monitoringType, config) {
     }
 }
 
-async function start() {
-    console.log("Запуск бота...");
 
-    for (const [monitoringType, config] of Object.entries(MONITORING)) {
+async function start() {
+
+    console.log(
+        "Запуск бота..."
+    );
+
+    for (
+        const [monitoringType, config]
+        of Object.entries(MONITORING)
+        ) {
+
         console.log(
             `Подготовка мониторинга: ${config.name}`
         );
@@ -148,28 +196,50 @@ async function start() {
         );
     }
 
-    setInterval(async () => {
-        for (const [monitoringType, config] of Object.entries(MONITORING)) {
-            await checkAds(
-                monitoringType,
-                config
-            );
-        }
-    }, 30000);
+    setInterval(
+        async () => {
+
+            for (
+                const [monitoringType, config]
+                of Object.entries(MONITORING)
+                ) {
+
+                await checkAds(
+                    monitoringType,
+                    config
+                );
+            }
+
+        },
+        30000
+    );
 }
+
 
 start();
 
+
 const app = express();
 
-app.get("/", (req, res) => {
-    res.send("Kufar bot is alive");
-});
+app.get(
+    "/",
+    (req, res) => {
+        res.send(
+            "Kufar bot is alive"
+        );
+    }
+);
 
-const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-    console.log(
-        `HTTP сервер запущен на порту ${PORT}`
-    );
-});
+const PORT =
+    process.env.PORT || 3000;
+
+app.listen(
+    PORT,
+    () => {
+
+        console.log(
+            `HTTP сервер запущен на порту ${PORT}`
+        );
+    }
+);
