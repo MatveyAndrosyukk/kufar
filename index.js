@@ -14,7 +14,7 @@ const MONITORING = {
     tv: {
         name: "телевизоры",
         emoji: "📺",
-        url: "https://api.kufar.by/search-api/v2/search/rendered-paginated?ar=1&cursor=eyJ0IjoiYWJzIiwiZiI6dHJ1ZSwicCI6MiwicGl0IjoiMjk3NzIzODUifQ%3D%3D&lang=ru&query=%D0%A2%D0%B5%D0%BB%D0%B5%D0%B2%D0%B8%D0%B7%D0%BE%D1%80&rgn=1&size=43&sort=lst.d"
+        url: "https://api.kufar.by/search-api/v2/search/rendered-paginated?cmp=1&lang=ru&mle=1&mlr=0&prc=r%3A50000%2C100000000000&query=%D1%82%D0%B5%D0%BB%D0%B5%D0%B2%D0%B8%D0%B7%D0%BE%D1%80&size=9&sort=lst.d"
     },
 
     bicycles: {
