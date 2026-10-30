@@ -1,13 +1,25 @@
+x-common: &common
+  build: .
+  restart: unless-stopped
+  env_file: .env
+  volumes:
+    - ./data:/data
+  logging:
+    driver: json-file
+    options:
+      max-size: "10m"
+      max-file: "3"
+
 services:
   bot:
-    build: .
+    <<: *common
     container_name: kufar-bot
-    restart: unless-stopped
-    env_file: .env
-    volumes:
-      - ./data:/data
-    logging:
-      driver: json-file
-      options:
-        max-size: "10m"
-        max-file: "3"
+
+  flats:
+    <<: *common
+    container_name: flats-bot
+    working_dir: /flats
+    environment:
+      BOT_TOKEN: ${FLATS_BOT_TOKEN}
+      DB_PATH: /data/flats.db
+      CHECK_INTERVAL: "90"

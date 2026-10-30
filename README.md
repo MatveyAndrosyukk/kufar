@@ -35,3 +35,21 @@ curl -fsSL https://raw.githubusercontent.com/MatveyAndrosyukk/kufar/master/insta
 - `app/handlers.py` — меню и создание мониторинга
 - `app/notify.py` — карточка объявления и листание фото
 - SQLite в `./data/bot.db`
+
+---
+
+# Бот квартир (Kufar + Realt + Flatly)
+
+Второй бот в этом же репозитории (`flats/`), запускается отдельным контейнером `flats-bot`.
+
+| Что ищем | Источники |
+|---|---|
+| 🏠 Снять надолго | Kufar, Realt |
+| 🛏 Посуточно | Realt, Flatly |
+| 🔑 Купить | Kufar, Realt |
+
+Выбор: тип → область → город → валюта и цена. Для городов Минской области Realt не поддерживается (только Kufar).
+Токен второго бота — `FLATS_BOT_TOKEN` в `.env`.
+
+## Деплой
+Пуш в `master` → GitHub Actions заходит на сервер, обновляет оба бота и проверяет, что они подключились к Telegram, а все сайты отдают объявления.
