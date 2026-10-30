@@ -42,6 +42,7 @@ jobs:
               echo "$R"
               echo "$R" | grep -q '"ok":true' && echo "$H" > data/.avatar
             fi
+            test "$(cat data/.avatar 2>/dev/null)" = "$H" && echo "AVATAR_OK"
             echo ">> Проверка: бот подключился к Telegram"
             for i in $(seq 1 12); do docker compose logs bot 2>&1 | grep -q "Run polling" && break; sleep 5; done
             docker compose logs --tail 30 bot
