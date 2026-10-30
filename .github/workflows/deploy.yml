@@ -11,6 +11,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+      - name: Decrypt bot token
+        env:
+          PASS: ${{ secrets.SERVER_PASSWORD }}
+        run: |
+          T=$(openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -a -A -pass env:PASS -in deploy/bot_token.enc)
+          echo "::add-mask::$T"
+          echo "BOT_TOKEN=$T" >> "$GITHUB_ENV"
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.2.0
         with:
@@ -27,5 +35,3 @@ jobs:
             grep -q "^BOT_TOKEN=$BOT_TOKEN$" .env || sed -i "s|^BOT_TOKEN=.*|BOT_TOKEN=$BOT_TOKEN|" .env
             docker compose up -d
             docker compose ps
-        env:
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
