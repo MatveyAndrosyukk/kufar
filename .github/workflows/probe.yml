@@ -10,21 +10,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          mkdir -p out
+          rm -rf out; mkdir -p out
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36"
-          for u in "https://flatly.by/brest" "https://flatly.by/minsk" "https://flatly.by/sitemap" "https://flatly.by/?type=apartments" "https://flatly.by/robots.txt" "https://flatly.by/sitemap.xml"; do
+          K="https://api.kufar.by/search-api/v2/search/rendered-paginated?cat=1010&lang=ru&size=2&rgn=1"
+          for q in "typ=let&rnt=1" "typ=let&rnt=2" "typ=let&rnt=3" "typ=let&rnt=4" "typ=let&flat_rent_type=2"; do curl -s -A "$UA" "$K&$q" | head -c 600 > "out/kufar_$(echo $q|tr '&=' '__').json"; echo >> "out/kufar_$(echo $q|tr '&=' '__').json"; done
+          for u in "https://re.kufar.by/l/brest/snyat/kvartiru-posutochno" "https://re.kufar.by/l/brest/snyat/kvartiru-dolgosrochno" "https://realt.by/brest-region/rent/flat-for-long/" "https://realt.by/brest-region/rent/flat-for-day/" "https://realt.by/brest-region/sale/flats/" "https://realt.by/rent/flat-for-long/" "https://flatly.by/listings/606-kvartiry-dlya-rabochih-brigad-stroiteley-v-breste"; do
             f=out/$(echo "$u" | sed 's|https://||;s|[/?=]|_|g').html
-            curl -sL -A "$UA" -D "$f.headers" -o "$f" "$u" || true
+            curl -sL -A "$UA" -H "Accept-Language: ru" -D "$f.headers" -o "$f" "$u" || true
           done
-          grep -oE '(src|href)="[^"]+\.js[^"]*"' out/flatly.by_brest.html | head -20 > out/js.txt || true
-          for js in $(grep -oE 'src="[^"]+\.js[^"]*"' out/flatly.by_brest.html | sed 's/src="//;s/"$//' | head -8); do
-            case "$js" in http*) U=$js;; *) U="https://flatly.by$js";; esac
-            curl -sL -A "$UA" "$U" | grep -oE '"/api/[^"]{1,80}"|`/api/[^`]{1,80}`|/api/[a-zA-Z0-9_/\-]{2,60}' | sort -u >> out/api.txt || true
-          done
-          curl -s -A "$UA" "https://api.kufar.by/search-api/v2/search/rendered-paginated?cat=1010&typ=let&lang=ru&size=2&rgn=1" > out/kufar_let.json
-          curl -s -A "$UA" "https://api.kufar.by/search-api/v2/search/rendered-paginated?cat=1010&typ=sell&lang=ru&size=2&rgn=1" > out/kufar_sell.json
-          curl -s -A "$UA" "https://api.kufar.by/search-api/v2/search/rendered-paginated?cat=1010&lang=ru&size=2&rgn=1&query=%D0%BF%D0%BE%D1%81%D1%83%D1%82%D0%BE%D1%87%D0%BD%D0%BE" > out/kufar_daily_q.json
-          curl -s -A "$UA" "https://api.kufar.by/search-api/v2/search/rendered-paginated?cat=1010&typ=let&lang=ru&size=2&rgn=1&rnt=2" > out/kufar_rnt2.json
           ls -la out
           git config user.name probe; git config user.email probe@users.noreply.github.com
           git add out && git commit -qm "probe results" && git push
