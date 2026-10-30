@@ -259,12 +259,26 @@ async def photo_flip(cb: CallbackQuery, bot: Bot):
 async def full_desc(cb: CallbackQuery):
     data = await db.get_ad(int(cb.data[5:]))
     await cb.answer()
-    if not data or not data.get("desc"):
+    if not data:
         await cb.message.answer("Описание недоступно")
         return
-    text = data["desc"]
-    for i in range(0, len(text), 4000):
-        await cb.message.reply(text[i:i + 4000])
+    text = data.get("details") or html.escape(data.get("desc") or "Описание отсутствует")
+    chunk = ""
+    for line in text.split("\n"):
+        while len(line) > 4000:  # очень длинная строка без переносов
+            cut = line.rfind(" ", 0, 4000)
+            cut = cut if cut > 0 else 4000
+            if chunk:
+                await cb.message.reply(chunk, parse_mode="HTML")
+                chunk = ""
+            await cb.message.reply(line[:cut], parse_mode="HTML")
+            line = line[cut:]
+        if len(chunk) + len(line) + 1 > 4000:
+            await cb.message.reply(chunk, parse_mode="HTML")
+            chunk = ""
+        chunk += line + "\n"
+    if chunk.strip():
+        await cb.message.reply(chunk, parse_mode="HTML")
 
 
 @router.callback_query(F.data == "noop")
