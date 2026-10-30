@@ -30,9 +30,11 @@
     docker compose logs $s 2>&1 | grep -q "Run polling"
   done
   echo ">> Проверка: Kufar API"
-  docker compose exec -T bot python -c "import asyncio,kufar;ads=asyncio.run(kufar.search({'query':'квартира','region_id':1,'city':'Брест'}));print('KUFAR_OK',len(ads));assert ads;assert all('брест' in str(kufar.location(a)).lower() for a in ads[:5])"
+  docker compose exec -T bot python -W ignore -c "import asyncio,kufar;ads=asyncio.run(kufar.search({'query':'квартира','region_id':1,'city':'Брест'}));print('KUFAR_OK',len(ads));assert ads;assert all('брест' in str(kufar.location(a)).lower() for a in ads[:5])"
   echo ">> Проверка: источники бота квартир"
   docker compose exec -T flats python /flats_check.py
+  echo ">> Время ответа realt с сервера"
+  for u in https://realt.by/rent/flat-for-day/ https://realt.by/brest-region/rent/flat-for-day/?sortType=createdAt; do curl -s -o /dev/null -w "%{http_code} %{time_total}s %{size_download}b $u\n" -A "Mozilla/5.0 Chrome/129" -m 90 "$u" || true; done
   echo DEPLOY_SUCCESS
 ) > /tmp/deploy.log 2>&1
 

@@ -1,4 +1,5 @@
 """HTTP-сессия, курс валют, загрузка фото с конвертацией в JPEG."""
+import asyncio
 import io
 import logging
 import time
@@ -19,7 +20,7 @@ _usd = {"rate": 3.0, "ts": 0.0}
 def session() -> aiohttp.ClientSession:
     global _session
     if _session is None or _session.closed:
-        _session = aiohttp.ClientSession(headers=HEADERS, timeout=aiohttp.ClientTimeout(total=30))
+        _session = aiohttp.ClientSession(headers=HEADERS, timeout=aiohttp.ClientTimeout(total=60, sock_connect=15))
     return _session
 
 
@@ -28,10 +29,16 @@ async def close():
         await _session.close()
 
 
-async def get_text(url: str, params=None) -> str:
-    async with session().get(url, params=params) as r:
-        r.raise_for_status()
-        return await r.text()
+async def get_text(url: str, params=None, tries: int = 2) -> str:
+    for attempt in range(tries):
+        try:
+            async with session().get(url, params=params) as r:
+                r.raise_for_status()
+                return await r.text()
+        except (asyncio.TimeoutError, aiohttp.ClientConnectionError):
+            if attempt == tries - 1:
+                raise
+            await asyncio.sleep(3)
 
 
 async def get_json(url: str, params=None):
