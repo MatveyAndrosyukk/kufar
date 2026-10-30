@@ -24,58 +24,18 @@ jobs:
           echo "BOT_TOKEN=$T" >> "$GITHUB_ENV"
           echo "FLATS_BOT_TOKEN=$F" >> "$GITHUB_ENV"
       - name: Deploy via SSH
-        id: ssh
-        uses: appleboy/ssh-action@v1.2.0
-        with:
-          capture_stdout: true
-          host: 194.87.78.244
-          username: root
-          password: ${{ secrets.SERVER_PASSWORD }}
-          command_timeout: 25m
-          envs: BOT_TOKEN,FLATS_BOT_TOKEN
-          script: |
-            (
-              set -e
-              curl -fsSL https://raw.githubusercontent.com/MatveyAndrosyukk/kufar/master/install.sh -o /tmp/kufar-install.sh
-              bash /tmp/kufar-install.sh
-              cd /opt/kufar-bot
-              setenv() { if grep -q "^$1=" .env; then sed -i "s|^$1=.*|$1=$2|" .env; else echo "$1=$2" >> .env; fi; }
-              setenv BOT_TOKEN "$BOT_TOKEN"
-              setenv FLATS_BOT_TOKEN "$FLATS_BOT_TOKEN"
-              docker compose up -d --build
-              docker compose ps
-
-              avatar() {  # $1 токен, $2 файл, $3 метка
-                H=$(sha1sum "$2" | cut -c1-40)
-                if [ "$(cat data/.avatar_$3 2>/dev/null)" != "$H" ]; then
-                  R=$(curl -s -F 'photo={"type":"static","photo":"attach://avatar"}' -F "avatar=@$2" "https://api.telegram.org/bot$1/setMyProfilePhoto")
-                  echo "$R" | grep -q '"ok":true' && echo "$H" > data/.avatar_$3 || echo "avatar $3: $R"
-                fi
-                test "$(cat data/.avatar_$3 2>/dev/null)" = "$H" && echo "AVATAR_OK $3"
-              }
-              [ -f data/.avatar ] && [ ! -f data/.avatar_kufar ] && mv data/.avatar data/.avatar_kufar
-              avatar "$BOT_TOKEN" deploy/avatar.jpg kufar
-              avatar "$FLATS_BOT_TOKEN" deploy/avatar_flats.jpg flats
-
-              echo ">> Проверка: оба бота подключились к Telegram"
-              for s in bot flats; do
-                for i in $(seq 1 15); do docker compose logs $s 2>&1 | grep -q "Run polling" && break; sleep 5; done
-                docker compose logs --tail 15 $s
-                docker compose logs $s 2>&1 | grep -q "Run polling"
-              done
-              echo ">> Проверка: Kufar API"
-              docker compose exec -T bot python -c "import asyncio,kufar;ads=asyncio.run(kufar.search({'query':'квартира','region_id':1,'city':'Брест'}));print('KUFAR_OK',len(ads));assert ads;assert all('брест' in str(kufar.location(a)).lower() for a in ads[:5])"
-              echo ">> Проверка: источники бота квартир"
-              docker compose exec -T flats python /flats_check.py
-              echo DEPLOY_SUCCESS
-            ) > /tmp/deploy.log 2>&1
-            sed -e "s|$BOT_TOKEN|***|g" -e "s|$FLATS_BOT_TOKEN|***|g" /tmp/deploy.log | tail -200
+        env:
+          SSHPASS: ${{ secrets.SERVER_PASSWORD }}
+        run: |
+          sudo apt-get install -y -qq sshpass >/dev/null
+          SSH="sshpass -e ssh -o StrictHostKeyChecking=no -o ServerAliveInterval=30 root@194.87.78.244"
+          $SSH "BOT_TOKEN='$BOT_TOKEN' FLATS_BOT_TOKEN='$FLATS_BOT_TOKEN' bash -s" < deploy/remote.sh || true
+          $SSH "cat /tmp/deploy.log" | sed -e "s|$BOT_TOKEN|***|g" -e "s|$FLATS_BOT_TOKEN|***|g" -e "s|$SSHPASS|***|g" | tail -250 > /tmp/deploy.log
+          cat /tmp/deploy.log
       - name: Save log
         if: always()
-        env:
-          OUT: ${{ steps.ssh.outputs.stdout }}
         run: |
-          printf '%s\n' "$OUT" > deploy.log
+          cp /tmp/deploy.log deploy.log || echo "no log" > deploy.log
           git config user.name deploy; git config user.email deploy@users.noreply.github.com
           git checkout -q --orphan deploy-log && git rm -rq --cached . && git add deploy.log
           git commit -qm "log ${GITHUB_SHA::7}" && git push -qf origin deploy-log
