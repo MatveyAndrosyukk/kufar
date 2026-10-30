@@ -35,6 +35,13 @@ jobs:
             grep -q "^BOT_TOKEN=$BOT_TOKEN$" .env || sed -i "s|^BOT_TOKEN=.*|BOT_TOKEN=$BOT_TOKEN|" .env
             docker compose up -d
             docker compose ps
+            echo ">> Аватарка бота"
+            H=$(sha1sum deploy/avatar.jpg | cut -c1-40)
+            if [ "$(cat data/.avatar 2>/dev/null)" != "$H" ]; then
+              R=$(curl -s -F 'photo={"type":"static","photo":"attach://avatar"}' -F "avatar=@deploy/avatar.jpg" "https://api.telegram.org/bot$BOT_TOKEN/setMyProfilePhoto")
+              echo "$R"
+              echo "$R" | grep -q '"ok":true' && echo "$H" > data/.avatar
+            fi
             echo ">> Проверка: бот подключился к Telegram"
             for i in $(seq 1 12); do docker compose logs bot 2>&1 | grep -q "Run polling" && break; sleep 5; done
             docker compose logs --tail 30 bot
