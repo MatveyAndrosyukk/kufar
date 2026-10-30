@@ -1,0 +1,20 @@
+HTTP/2 301 
+server: nginx
+date: Fri, 30 Oct 2026 11:39:11 GMT
+content-type: text/html; charset=utf-8
+x-powered-by: PHP/8.4.27
+set-cookie: XSRF-TOKEN=eyJpdiI6IlQreVBEY0RiUnpzUXlTcE92UTdTZlE9PSIsInZhbHVlIjoiblU3OFp5em1jYWN5VnFqekZKaEllbWdEL29XeEVMNHRXZVNLWDRXRjB3d0VSU0IwTzZZUE5oV3BkR1JkcDhqZnFHOENidlZJd05SQkZITjQra3dkVGJSZFVUVWtJZkFpcHJ3b293anBCM2ZtMkJoV1p6Wlk0S0pESmQzUUhaZUQiLCJtYWMiOiJiYzYzMDNmYTYyMmRkZWYxODA0YTFiN2I1NzgzYmNjNmFiMjhjM2VkMzk3YzcxZDdiMzJhMjUzZWJmZWE5YTcxIiwidGFnIjoiIn0%3D; expires=Fri, 30 Oct 2026 13:39:11 GMT; Max-Age=7200; path=/; secure; samesite=lax
+set-cookie: laravel-session=eyJpdiI6IktLNzdQYTF5VXA2WXczNFVEMUxva1E9PSIsInZhbHVlIjoiT25ISUQzdktkT3hBVm9KRXJMV1g0Rnk0eWM1eTlaY2J0cmpha2ZFVTlqZ0E2VUFvOHpSZUZCbjF0Wi9NbXgrWUtlTHRxMEpsZWc2d0NDSFdqMWM2Nnl0TTNTeFVML0dQU25kYURrRVJ0WHZlOVRmeTJxSkRDYW5ZQXBwcEJZYUoiLCJtYWMiOiI1YmZkYjZhM2I3NTNhNGExMGZmYmU5NzczOWMxNWZjOGZlMGJkOWNlM2QxNmQ3N2Y5ZmZlYWFmYWEzMzdkNTQwIiwidGFnIjoiIn0%3D; expires=Fri, 30 Oct 2026 13:39:11 GMT; Max-Age=7200; path=/; secure; httponly; samesite=lax
+location: https://flatly.by/apartments
+
+HTTP/2 200 
+server: nginx
+date: Fri, 30 Oct 2026 11:39:12 GMT
+content-type: text/html; charset=utf-8
+x-powered-by: PHP/8.4.27
+cache-control: private, must-revalidate
+pragma: no-cache
+expires: -1
+set-cookie: XSRF-TOKEN=eyJpdiI6InFqZ2x3Rk1US0pWai80cGw1aFBzSXc9PSIsInZhbHVlIjoiMHYwbzU0VjJhMVlNK2pXS3RTM1lkSXVYVkdaRXBaVEwydVpOQjNWR2kwemJRdjlUNDhiaEY3azlUYnNFZ0JKS1VaQzgzckl5U1FPanNLVzVrT2ZlbmhkSDJINHl4anZTelhqekdTVS9PTS9vdHc4bTc5VitoQ0lJODRnZFIxeXoiLCJtYWMiOiJhNTZhZWY1MDhmZTY1NDEzOGFjNTA3MjgxZThlNWIwOThhN2ViMDg1MmQ3NDk2MTNlMWM2YWEzMjVlNDgzMmZjIiwidGFnIjoiIn0%3D; expires=Fri, 30 Oct 2026 13:39:12 GMT; Max-Age=7200; path=/; secure; samesite=lax
+set-cookie: laravel-session=eyJpdiI6IjNzZytpbk91QUtFb0N3cWpZUzlHYXc9PSIsInZhbHVlIjoiVSsrbXpaVDF3UW9vU3FVUUlCcHgzeGJPYVNSenREU2p5NXhIR0VIZUNKcWxmRE9mMnVyK0dEUjV1MWk5VmtGcURoeHRUUWdkQldXYlQ3V3hJZVUveUVhUjFnQ1d0cnN6aFl0djVFZVN0c2xGVmNGYk5tejgyTjR6ajMxNC9iNkwiLCJtYWMiOiJjM2NhOTFhYjVlMGMxYjU0OTgxNTkwNjk3YjYwODY3NGY3ZDA0Y2Q4ZDdlYjAzNDNjYTdiYTg0YmY3ZWYwZjNmIiwidGFnIjoiIn0%3D; expires=Fri, 30 Oct 2026 13:39:12 GMT; Max-Age=7200; path=/; secure; httponly; samesite=lax
+

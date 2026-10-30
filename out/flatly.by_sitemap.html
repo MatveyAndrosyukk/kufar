@@ -1,0 +1,4183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Карта сайта — Flatly.by</title>
+<meta name="description" content="Снять квартиру посуточно или коттедж в Минске и других городах Беларуси. Прямые контакты хозяев, актуальные цены, без комиссий и посредников.">
+<meta name="keywords" content="аренда квартир посуточно, снять квартиру минск, посуточно коттеджи беларусь, аренда без посредников">
+<link rel="canonical" href="https://flatly.by/sitemap">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://flatly.by/sitemap">
+<meta property="og:title" content="Карта сайта — Flatly.by">
+<meta property="og:description" content="Снять квартиру посуточно или коттедж в Минске и других городах Беларуси без посредников.">
+<meta property="og:image" content="https://flatly.by/opla.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://flatly.by/sitemap">
+<meta property="twitter:title" content="Карта сайта — Flatly.by">
+<meta property="twitter:description" content="Снять квартиру посуточно или коттедж в Минске и других городах Беларуси без посредников.">
+<meta property="twitter:image" content="https://flatly.by/opla.png">
+
+<link rel="preload" href="/fonts/inter-400-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-500-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-500-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-600-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-700-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/syne-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.sitemap-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  color: var(--slate-900);
+}
+.sitemap-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.sitemap-header h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--slate-900);
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+.sitemap-header p {
+  font-size: 16px;
+  color: var(--gray-text);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.sitemap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.sitemap-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+.sitemap-card.full-width {
+  grid-column: span 3;
+}
+.sitemap-card h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--slate-900);
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--slate-50);
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sitemap-card h2 svg {
+  color: var(--amber);
+}
+.sitemap-links {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.sitemap-links li {
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+.sitemap-links li:last-child {
+  margin-bottom: 0;
+}
+.sitemap-links a {
+  color: var(--slate-700);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: inline-block;
+}
+.sitemap-links a:hover {
+  color: var(--slate-900);
+  text-decoration: underline;
+}
+.cities-subgrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 8px;
+}
+.blog-subgrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.blog-sitemap-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.blog-sitemap-item span {
+  font-size: 12px;
+  color: var(--gray-text);
+}
+
+@media (max-width: 991px) {
+  .sitemap-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .sitemap-card.full-width {
+    grid-column: span 2;
+  }
+  .cities-subgrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .sitemap-grid {
+    grid-template-columns: 1fr;
+  }
+  .sitemap-card.full-width {
+    grid-column: span 1;
+  }
+  .cities-subgrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .blog-subgrid {
+    grid-template-columns: 1fr;
+  }
+  .sitemap-card {
+    padding: 24px;
+  }
+}
+</style>
+
+<style>
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-400-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-400-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/inter-500-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/inter-500-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/inter-600-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/inter-600-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/inter-700-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/inter-700-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/syne-600-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/syne-700-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/syne-800-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; overflow-x: visible; width: 100%; }
+body { font-family: 'Inter', sans-serif; background: #fff; color: #1A1A2E; font-size: 14px; line-height: 1.5; overflow-x: visible; width: 100%; }
+a { text-decoration: none; color: inherit; }
+/* ===== BREADCRUMBS ===== */
+.breadcrumbs-nav::-webkit-scrollbar { display: none; }
+.breadcrumbs-nav { -ms-overflow-style: none; scrollbar-width: none; }
+.breadcrumbs-list a:hover { color: var(--amber-dark) !important; }
+button { cursor: pointer; font-family: 'Inter', sans-serif; }
+img { display: block; max-width: 100%; }
+
+.content-wrapper {
+  overflow-x: clip;
+  width: 100%;
+}
+
+/* ===== PALETTE ===== */
+:root {
+  --slate-900: #1A1A2E;
+  --slate-800: #16213E;
+  --slate-700: #2D2D44;
+  --slate-600: #3D3D5C;
+  --slate-200: #D0D0E0;
+  --slate-100: #F0EFF8;
+  --slate-50:  #F7F7FB;
+  --amber:     #F5A623;
+  --amber-light: #FFD07B;
+  --amber-dark:  #C47D0C;
+  --white:     #FFFFFF;
+  --gray-text: #6B6B80;
+  --border:    #E8E8F0;
+  --red:       #FF385C;
+}
+
+/* ===== TOPNAV ===== */
+.topnav {
+  position: sticky; top: 0; z-index: 2000;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  height: 80px;
+  display: flex; align-items: center;
+  padding: 0 32px; gap: 24px;
+  transition: box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+.topnav.scrolled {
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  border-bottom-color: rgba(0, 0, 0, 0.04);
+}
+.logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px; font-weight: 800;
+  color: var(--slate-900);
+  letter-spacing: -0.5px;
+  flex-shrink: 0;
+  display: flex; align-items: center; gap: 8px;
+}
+.logo-dot { color: var(--amber); }
+.logo svg { width: 28px; height: 28px; }
+
+/* Header Category Navigation */
+.nav-categories {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.nav-cat-item {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--slate-900);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+.nav-cat-item:hover {
+  background: var(--slate-50);
+}
+.nav-cat-item.active {
+  background: var(--slate-900);
+  color: var(--white);
+}
+
+.searchbar {
+  flex: 1; max-width: 980px;
+  border: 1px solid var(--border);
+  border-radius: 40px;
+  display: flex; align-items: center;
+  height: 52px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  transition: box-shadow .2s;
+  background: var(--white);
+  margin: 0 16px;
+}
+.searchbar:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.12); }
+.sb-seg {
+  display: flex; flex-direction: column;
+  justify-content: center;
+  padding: 0 14px;
+  cursor: pointer;
+  height: 100%;
+}
+.sb-seg-city { flex: 1.2; min-width: 80px; }
+.sb-seg-type { flex: 1.0; min-width: 75px; }
+.sb-seg-rooms { flex: 0.8; min-width: 60px; }
+.sb-seg-price { flex: 0.8; min-width: 60px; }
+.sb-seg-guests { flex: 1.0; min-width: 80px; }
+.sb-icon { width: 14px; height: 14px; stroke: var(--slate-900); fill: none; stroke-width: 2.5; display: block; }
+
+.sb-seg:first-child {
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+.sb-seg:hover { background: var(--slate-50); }
+.sb-seg-label { font-size: 10px; font-weight: 700; color: var(--slate-900); text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+.sb-seg-val { font-size: 12.5px; color: var(--gray-text); font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
+.sb-div { width: 1px; height: 26px; background: var(--border); flex-shrink: 0; }
+.sb-filter-btn {
+  width: 38px; height: 38px; margin: 0 2px;
+  border-radius: 50%; border: 1px solid var(--border);
+  background: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: background .15s, border-color .15s;
+  color: var(--slate-900);
+}
+.sb-filter-btn:hover { background: var(--slate-50); border-color: var(--slate-300); }
+.sb-btn {
+  width: 38px; height: 38px; margin: 0 6px 0 2px;
+  border-radius: 50%; border: none;
+  background: var(--amber);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: background .15s;
+  cursor: pointer;
+}
+.sb-btn:hover { background: var(--amber-dark); }
+.sb-btn svg { width: 16px; height: 16px; stroke: var(--white); fill: none; stroke-width: 2.5; stroke-linecap: round; }
+.sb-dropdown-btn {
+  background: var(--slate-900);
+  color: var(--white);
+  border: none;
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.sb-dropdown-btn:hover { background: var(--slate-800); }
+
+.nav-right { display: flex; align-items: center; gap: 4px; margin-left: auto; flex-shrink: 0; }
+.nav-link {
+  font-size: 14px; font-weight: 500;
+  padding: 8px 16px; border-radius: 22px;
+  color: var(--slate-900); white-space: nowrap;
+  transition: background .15s;
+}
+.nav-link:hover { background: var(--slate-50); }
+.nav-user {
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  display: flex; align-items: center;
+  gap: 10px; padding: 6px 8px 6px 14px;
+  margin-left: 8px; cursor: pointer;
+  transition: box-shadow .15s;
+  position: relative;
+}
+.nav-user:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.avatar {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--slate-700);
+  display: flex; align-items: center; justify-content: center;
+}
+.avatar svg { width: 20px; height: 20px; stroke: #fff; }
+
+/* ===== DROPDOWNS (APPLE STYLE) ===== */
+.search-dropdown, .currency-dropdown, .user-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: none;
+  flex-direction: column;
+  padding: 6px 0;
+  z-index: 1500;
+  text-align: left;
+}
+.search-dropdown.show, .currency-dropdown.show, .user-dropdown.show {
+  display: flex;
+}
+.search-dropdown {
+  max-height: 380px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+  width: 240px;
+}
+.search-dropdown::-webkit-scrollbar {
+  width: 8px;
+}
+.search-dropdown::-webkit-scrollbar-track {
+  background: transparent;
+}
+.search-dropdown::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+.search-dropdown::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.search-dropdown-group-title {
+  font-size: 10px;
+  font-weight: 700;
+  color: #706f6c;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 8px 16px 4px 16px;
+  pointer-events: none;
+  user-select: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  margin-top: 4px;
+}
+.search-dropdown-group-title:first-of-type {
+  border-top: none;
+  margin-top: 0;
+}
+
+.search-dropdown-item, .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: #000000;
+  cursor: pointer;
+  font-weight: 400;
+  transition: background 0.1s, color 0.1s;
+  user-select: none;
+  border-radius: 6px;
+  margin: 1px 6px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.search-dropdown-item:hover, .dropdown-item:hover {
+  background: #007AFF !important;
+  color: #FFFFFF !important;
+}
+.search-dropdown-item .checkmark, .dropdown-item .checkmark {
+  width: 12px;
+  font-size: 11px;
+  font-weight: bold;
+  color: currentColor;
+  visibility: hidden;
+  flex-shrink: 0;
+}
+.search-dropdown-item.active .checkmark, .dropdown-item.active .checkmark {
+  visibility: visible;
+}
+.search-dropdown-item .city-name, .search-dropdown-item .type-name {
+  flex: 1;
+}
+
+/* Specific position adjustments */
+.currency-dropdown {
+  top: 48px;
+  right: 0;
+  left: auto;
+  width: 135px;
+}
+.user-dropdown {
+  top: 48px;
+  right: 0;
+  left: auto;
+  width: 240px;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+  margin: 6px 0;
+}
+
+/* ===== SEARCH BACKDROP (NO DEKSTOP BLUR) ===== */
+.search-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  z-index: 1900;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.search-backdrop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .search-backdrop {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 2400;
+  }
+}
+
+/* ===== GLOBAL GUESTS SELECTOR ===== */
+.guests-selector {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  height: 48px;
+  width: 180px;
+  background: var(--white);
+  overflow: hidden;
+}
+.guests-selector button {
+  width: 48px;
+  height: 100%;
+  border: none;
+  background: var(--slate-50);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--slate-900);
+  transition: background .15s;
+  cursor: pointer;
+}
+.guests-selector button:hover {
+  background: var(--slate-100);
+}
+.guests-selector span {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--slate-900);
+}
+
+/* ===== CURRENCY SELECTOR ===== */
+.currency-selector {
+  position: relative;
+  margin-left: 8px;
+}
+.currency-label {
+  color: var(--gray-text);
+  margin-right: 2px;
+}
+.currency-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 22px;
+  color: var(--slate-900);
+  font-weight: 500;
+  font-size: 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background .15s;
+}
+.currency-btn:hover {
+  background: var(--slate-50);
+}
+
+/* ===== CONTACT SELECTOR ===== */
+.nav-contact-selector {
+  position: relative;
+  margin-right: 8px;
+}
+.nav-contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 22px;
+  color: var(--slate-900);
+  font-weight: 500;
+  font-size: 13.5px;
+  background: transparent;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: background .15s, border-color .15s;
+}
+.nav-contact-btn:hover {
+  background: var(--slate-50);
+  border-color: var(--slate-300);
+}
+.nav-contact-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: auto;
+  margin-top: 8px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: none;
+  flex-direction: column;
+  padding: 10px 0;
+  z-index: 1500;
+  text-align: left;
+  width: 250px;
+}
+.nav-contact-dropdown.show {
+  display: flex;
+}
+.contact-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  font-size: 13.5px;
+  color: var(--slate-900);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.15s, color 0.15s;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 0 8px;
+}
+.contact-dropdown-item:hover {
+  background: #007AFF !important;
+  color: #FFFFFF !important;
+}
+.contact-dropdown-item svg {
+  flex-shrink: 0;
+  color: currentColor;
+}
+.contact-dropdown-divider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+  margin: 8px 16px;
+}
+.contact-dropdown-messengers {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.messenger-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  font-size: 13.5px;
+  color: var(--slate-900);
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 8px;
+  margin: 0 8px;
+  transition: background 0.15s, color 0.15s;
+}
+.messenger-link:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+.messenger-link.tg:hover {
+  background: rgba(0, 136, 204, 0.1);
+  color: #0088cc;
+}
+.messenger-link.vb:hover {
+  background: rgba(115, 9, 143, 0.1);
+  color: #73098f;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: linear-gradient(180deg, #151525 0%, #0c0c16 100%);
+  color: var(--white);
+  padding: 64px 32px 32px;
+  position: relative;
+}
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--amber) 0%, var(--amber-light) 50%, var(--amber) 100%);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px; margin-bottom: 48px;
+}
+.footer-logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 24px; font-weight: 800;
+  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer-logo svg {
+  width: 26px; height: 26px;
+}
+.footer-logo .logo-dot { color: var(--amber); }
+.footer-desc { font-size: 13.5px; color: rgba(255,255,255,.55); line-height: 1.8; max-width: 100%; margin-bottom: 24px; }
+footer h4 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,.8); margin-bottom: 20px; }
+footer ul { list-style: none; }
+footer ul li { margin-bottom: 12px; }
+footer ul li a { 
+  font-size: 14px; 
+  color: rgba(255,255,255,.6); 
+  transition: all .25s ease;
+  display: inline-block;
+}
+footer ul li a:hover { 
+  color: var(--amber); 
+  transform: translateX(4px);
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding-top: 28px;
+  display: flex; justify-content: space-between; align-items: flex-end;
+  flex-wrap: wrap; gap: 24px;
+}
+.footer-bottom p { font-size: 12.5px; color: rgba(255,255,255,.35); }
+.footer-bottom-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 280px;
+}
+.footer-bottom-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer-bottom-links a {
+  font-size: 12.5px;
+  color: rgba(255,255,255,.35);
+  transition: color .15s;
+}
+.footer-bottom-links a:hover { color: var(--white); }
+.footer-payment-image {
+  flex-shrink: 0;
+}
+
+/* Social Icons */
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+.social-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+.social-icon:hover {
+  background: var(--amber);
+  color: var(--slate-900);
+  border-color: var(--amber);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(245, 166, 35, 0.3);
+}
+.social-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+
+
+/* ===== PAGINATION ===== */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 32px 0 16px;
+}
+.page-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--slate-900);
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+}
+.page-btn:hover {
+  background: var(--slate-50);
+  border-color: var(--slate-300);
+  color: var(--slate-900);
+}
+.page-btn.active {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: var(--white);
+}
+.page-btn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.page-ellipsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-text);
+  user-select: none;
+}
+
+/* ===== TOAST ===== */
+.toast {
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+  background: var(--slate-900); color: #fff;
+  padding: 12px 20px; border-radius: 30px;
+  font-size: 14px; font-weight: 500;
+  opacity: 0; pointer-events: none;
+  transition: opacity .25s;
+  z-index: 999; white-space: nowrap;
+}
+.toast.show { opacity: 1; }
+
+/* ===== COOKIE BANNER ===== */
+.cookie-banner {
+  position: fixed; bottom: 24px; left: 50%; transform: translate(-50%, calc(100% + 40px));
+  width: calc(100% - 48px); max-width: 820px;
+
+  background: rgba(26, 26, 46, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 16px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  z-index: 9999;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.cookie-banner.show { transform: translate(-50%, 0); }
+.cookie-content { display: flex; align-items: center; gap: 14px; flex: 1; }
+.cookie-icon { font-size: 26px; }
+.cookie-text { font-size: 13px; color: rgba(255,255,255,0.85); line-height: 1.5; text-align: left; }
+.cookie-link { color: var(--amber); text-decoration: underline; font-weight: 500; }
+.cookie-link:hover { color: var(--amber-light); }
+.cookie-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.cookie-btn {
+  padding: 9px 18px; border-radius: 20px; border: none;
+  font-size: 12px; font-weight: 700; font-family: 'Inter', sans-serif;
+  cursor: pointer; transition: all 0.15s;
+}
+.cookie-btn.accept { background: var(--amber); color: var(--slate-900); }
+.cookie-btn.accept:hover { background: var(--amber-light); }
+.cookie-btn.reject { background: transparent; color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.2); }
+.cookie-btn.reject:hover { color: #FFF; border-color: #FFF; }
+.cookie-btn.settings { background: rgba(255,255,255,0.1); color: #FFF; }
+.cookie-btn.settings:hover { background: rgba(255,255,255,0.2); }
+
+/* ===== HEADER CONTACTS & FAVORITES ===== */
+.nav-contacts {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+.nav-phone-link {
+  color: var(--slate-900);
+  font-size: 13.5px;
+  font-weight: 650;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  transition: color 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.nav-phone-link:hover {
+  color: var(--amber-dark);
+}
+.nav-phone-link svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  fill: none;
+}
+.nav-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  color: var(--slate-900);
+}
+.nav-social-link:hover {
+  background: rgba(0, 0, 0, 0.09);
+  transform: scale(1.05);
+  color: var(--slate-900);
+}
+.nav-social-link.tg:hover {
+  color: #0088cc;
+  background: rgba(0, 136, 204, 0.08);
+}
+.nav-social-link.vb:hover {
+  color: #7360f2;
+  background: rgba(115, 96, 242, 0.08);
+}
+.nav-social-link svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+.nav-fav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--slate-900);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: 8px;
+  text-decoration: none;
+}
+.nav-fav-link:hover {
+  background: rgba(0, 0, 0, 0.09);
+  transform: scale(1.05);
+}
+.nav-fav-link svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  fill: none;
+  transition: fill 0.15s, stroke 0.15s;
+}
+.nav-fav-link:hover svg {
+  stroke: var(--red);
+}
+body.showing-only-favorites .nav-fav-link {
+  background: rgba(255, 75, 75, 0.1);
+  color: var(--red);
+}
+body.showing-only-favorites .nav-fav-link svg {
+  stroke: var(--red);
+  fill: var(--red);
+}
+.fav-counter {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--red);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #fff;
+  line-height: 1;
+}
+
+.nav-create-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--amber);
+  color: var(--slate-900) !important;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+.nav-create-btn:hover {
+  background: var(--amber-dark);
+  color: var(--white) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245, 166, 35, 0.2);
+}
+.nav-create-btn svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  stroke-width: 3;
+}
+
+/* ===== RESPONSIVE DESKTOP HEADER IMPROVEMENTS ===== */
+.contact-text-short, .create-text-short {
+  display: none;
+}
+.nav-contact-btn .contact-icon {
+  display: none;
+}
+.topnav {
+  width: 100%;
+  max-width: 100%;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 1550px) {
+  .topnav {
+    padding: 0 20px;
+    gap: 16px;
+  }
+  .searchbar {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 1420px) {
+  .topnav {
+    padding: 0 12px;
+    gap: 10px;
+  }
+  .searchbar {
+    margin: 0 6px;
+  }
+  .contact-text-full, .create-text-full {
+    display: none;
+  }
+  .contact-text-short, .create-text-short {
+    display: inline;
+  }
+  .currency-selector .currency-label {
+    display: inline;
+  }
+  .currency-btn {
+    padding: 8px;
+  }
+  .sb-seg {
+    padding: 0 10px;
+  }
+  .sb-seg-city { min-width: 70px; }
+  .sb-seg-type { min-width: 65px; }
+  .sb-seg-rooms { min-width: 50px; }
+  .sb-seg-price { min-width: 50px; }
+  .sb-seg-guests { min-width: 65px; }
+  .searchbar .sb-seg-val {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 1180px) {
+  .topnav {
+    gap: 8px;
+  }
+  .nav-contact-btn {
+    padding: 8px;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    justify-content: center;
+  }
+  .nav-contact-btn .contact-icon {
+    display: block;
+    margin-right: 0 !important;
+  }
+  .contact-text-short {
+    display: none !important;
+  }
+  .nav-contact-btn .chevron-icon {
+    display: none !important;
+  }
+  .nav-create-btn {
+    padding: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    justify-content: center;
+  }
+  .create-text-short {
+    display: none !important;
+  }
+  .nav-create-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+  .nav-contact-selector {
+    margin-right: 0px;
+  }
+  .currency-selector {
+    margin-left: 2px;
+  }
+  .nav-user {
+    margin-left: 2px;
+  }
+  .logo {
+    font-size: 20px;
+    gap: 6px;
+  }
+  .logo svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 991px) {
+  .nav-contacts {
+    display: flex;
+    gap: 8px;
+    margin-right: 8px;
+  }
+  .nav-phone-link span {
+    display: none;
+  }
+  .nav-phone-link {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .nav-phone-link svg {
+    width: 16px;
+    height: 16px;
+  }
+  @media (max-width: 480px) {
+    .nav-contacts .vb {
+      display: none;
+    }
+  }
+  .topnav {
+    padding: 10px 16px !important;
+  }
+  footer {
+    padding: 40px 16px 32px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .cookie-banner { flex-direction: column; align-items: stretch; text-align: center; padding: 20px; }
+  .cookie-content { flex-direction: column; gap: 10px; }
+  .cookie-actions { justify-content: center; width: 100%; margin-top: 10px; }
+  .cookie-btn { flex: 1; }
+
+  /* Footer mobile responsiveness */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .footer-payment-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+  }
+  
+  /* Topnav mobile responsiveness */
+  .topnav {
+    flex-wrap: wrap;
+    height: 110px !important;
+    padding: 10px 16px;
+    gap: 8px;
+    z-index: 2600;
+  }
+  .nav-contact-dropdown {
+    right: -160px !important;
+    left: auto !important;
+  }
+  .currency-btn {
+    font-size: 12px !important;
+  }
+  .nav-categories {
+    order: 4;
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 4px 0;
+    gap: 6px;
+  }
+  .nav-categories::-webkit-scrollbar { display: none; }
+  .nav-cat-item {
+    font-size: 12.5px;
+    padding: 5px 10px;
+  }
+  .logo {
+    order: 1;
+    font-size: 18px;
+    gap: 6px;
+  }
+  .logo svg {
+    width: 22px !important;
+    height: 22px !important;
+    flex-shrink: 0;
+  }
+  .nav-right {
+    order: 2;
+    margin-left: auto;
+    gap: 6px;
+    display: flex;
+    align-items: center;
+  }
+  .nav-link {
+    display: none;
+  }
+  .nav-fav-link {
+    margin-right: 0 !important;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+  .nav-fav-link svg {
+    width: 16px !important;
+    height: 16px !important;
+    flex-shrink: 0;
+  }
+  .currency-selector {
+    margin-left: 0 !important;
+    flex-shrink: 0;
+  }
+  .currency-selector .currency-label {
+    display: none !important;
+  }
+  .currency-btn {
+    padding: 5px 6px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .currency-btn svg {
+    width: 8px !important;
+    height: 5px !important;
+    flex-shrink: 0;
+  }
+  .nav-user {
+    padding: 4px 6px 4px 8px;
+    gap: 4px;
+    margin-left: 0 !important;
+    flex-shrink: 0;
+  }
+  .nav-user svg {
+    width: 16px !important;
+    height: 16px !important;
+    flex-shrink: 0;
+  }
+  .avatar {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .avatar svg {
+    width: 16px !important;
+    height: 16px !important;
+    flex-shrink: 0;
+  }
+  .searchbar {
+    order: 3;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    height: 44px;
+    padding: 0 4px 0 10px !important;
+  }
+  .sb-seg {
+    padding: 0 4px !important;
+    min-width: 0 !important;
+  }
+  .sb-seg-city { flex: 1.2 1 0% !important; }
+  .sb-seg-type { flex: 1.0 1 0% !important; }
+  .sb-seg-rooms { flex: 0.8 1 0% !important; }
+  .sb-seg-price { flex: 0.8 1 0% !important; }
+  .sb-seg-guests { flex: 0.8 1 0% !important; }
+  
+  .sb-seg-label {
+    font-size: 8.5px !important;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .sb-seg-label .sb-icon {
+    width: 12px !important;
+    height: 12px !important;
+  }
+  .sb-seg-val {
+    font-size: 11px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    display: block;
+  }
+  .sb-filter-btn {
+    width: 32px !important;
+    height: 32px !important;
+    margin: 0 2px !important;
+    flex-shrink: 0;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+  .sb-filter-btn svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  .sb-btn {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+  .sb-div {
+    height: 16px;
+    display: block !important;
+    flex-shrink: 0;
+  }
+  
+  /* Prevent zoom on input elements in mobile browsers (e.g. Safari on iOS) */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+  
+  /* Search dropdowns as bottom sheets on mobile */
+  @keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+  .search-dropdown {
+    position: fixed !important;
+    top: auto !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 60vh !important;
+    border-radius: 24px 24px 0 0 !important;
+    border: none !important;
+    border-top: 1px solid var(--border) !important;
+    box-shadow: 0 -8px 32px rgba(26, 26, 46, 0.15) !important;
+    z-index: 2500 !important;
+    padding: 24px 20px 30px !important;
+    background: #ffffff !important;
+  }
+  .search-dropdown.show {
+    display: flex;
+    animation: slideUp 0.25s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  }
+  .search-dropdown::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: var(--slate-200);
+    border-radius: 2px;
+    margin: -12px auto 16px;
+    flex-shrink: 0;
+  }
+  .search-backdrop {
+    z-index: 2400;
+  }
+}
+.disabled {
+  pointer-events: none !important;
+  cursor: default !important;
+  opacity: 0.65;
+  text-decoration: none !important;
+}
+/* ===== GLOBAL TEXT SIZE INCREASE OVERRIDES ===== */
+body { font-size: 15px !important; }
+.nav-link, .currency-btn, .nav-phone-link { font-size: 15px !important; }
+.searchbar .sb-seg-label { font-size: 11.5px !important; }
+.searchbar .sb-seg-val { font-size: 13.5px !important; }
+@media (max-width: 768px) {
+  .searchbar .sb-seg-label { font-size: 8px !important; }
+  .searchbar .sb-seg-val { font-size: 11px !important; }
+  .badge-pill.map-pill {
+    padding: 5px 10px !important;
+    min-height: 28px !important;
+    position: relative !important;
+  }
+  .badge-pill.map-pill::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    bottom: -8px;
+    left: -6px;
+    right: -6px;
+  }
+}
+footer h4 { font-size: 14px !important; }
+footer ul li a { font-size: 15px !important; }
+footer .footer-desc { font-size: 14.5px !important; }
+footer .footer-bottom p { font-size: 13.5px !important; }
+.dropdown-item, .search-dropdown-item { font-size: 14px !important; }
+
+/* ===== HOME HERO HEADER ANIMATION ===== */
+body.is-home-hero .topnav .searchbar {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  max-width: 0;
+  border-width: 0;
+  overflow: hidden;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), max-width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+body.is-home-hero.scrolled .topnav .searchbar {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  max-width: 520px;
+  border-width: 1px;
+}
+
+/* ===== SCROLL TO TOP BUTTON ===== */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: var(--slate-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.scroll-to-top-btn:hover {
+  background: var(--slate-900);
+  color: var(--white);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+}
+.scroll-to-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.scroll-to-top-btn svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+@media (max-width: 768px) {
+  .scroll-to-top-btn {
+    bottom: 16px;
+    right: 16px;
+    width: 42px;
+    height: 42px;
+  }
+  .scroll-to-top-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media (min-width: 992px) {
+  body:has(.map-col) .scroll-to-top-btn {
+    right: calc(44% + 8px);
+  }
+  body:has(.favorites-container) .scroll-to-top-btn {
+    right: max(24px, calc(50% - 700px + 24px));
+  }
+  body:has(.container) .scroll-to-top-btn {
+    right: max(24px, calc(50% - 620px + 24px));
+  }
+  body:has(.dashboard-container) .scroll-to-top-btn {
+    right: max(24px, calc(50% - 600px + 24px));
+  }
+  body:has(.layout) .scroll-to-top-btn {
+    right: max(24px, calc(50% - 550px + 24px));
+  }
+  body:has(.legal-container) .scroll-to-top-btn {
+    right: max(24px, calc(50% - 500px + 24px));
+  }
+}
+
+/* Medium viewport header responsiveness */
+@media (min-width: 992px) and (max-width: 1300px) {
+  .topnav {
+    padding: 0 16px;
+    gap: 12px;
+  }
+  .nav-categories {
+    gap: 4px;
+  }
+  .nav-cat-item {
+    padding: 6px 12px;
+    font-size: 13.5px;
+  }
+  .nav-contacts {
+    gap: 8px;
+    margin-right: 8px;
+  }
+  .nav-social-link {
+    display: none;
+  }
+  .nav-link {
+    padding: 6px 12px;
+    font-size: 13.5px;
+  }
+  .nav-link, .currency-btn, .nav-phone-link {
+    font-size: 14px !important;
+  }
+}
+
+/* ===== SUPPORT MODAL ===== */
+.support-modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(26, 26, 46, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 3500;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.support-modal-backdrop.show {
+  display: flex;
+  opacity: 1;
+}
+.support-modal-card {
+  background: #ffffff;
+  width: 92%;
+  max-width: 480px;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.15), 0 0 0 1px rgba(15, 23, 42, 0.05);
+  padding: 40px 36px 36px 36px;
+  position: relative;
+  transform: translateY(24px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 90vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.support-modal-card::-webkit-scrollbar {
+  display: none;
+}
+.support-modal-backdrop.show .support-modal-card {
+  transform: translateY(0);
+}
+.support-modal-close {
+  position: absolute;
+  top: 24px; right: 24px;
+  background: #f1f5f9;
+  border: none;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  color: var(--slate-600);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.support-modal-close:hover {
+  background: #e2e8f0;
+  color: var(--slate-900);
+  transform: rotate(90deg);
+}
+.support-modal-title {
+  font-family: 'Syne', 'Inter', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--slate-900);
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+.support-modal-subtitle {
+  font-size: 13.5px;
+  color: var(--slate-600);
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+.support-form-group {
+  margin-bottom: 20px;
+}
+.support-form-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: var(--slate-600);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.support-form-label span.required {
+  color: var(--red);
+  margin-left: 2px;
+}
+.support-type-buttons {
+  display: flex;
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 4px;
+  gap: 4px;
+}
+.support-type-btn {
+  flex: 1;
+  height: 38px;
+  background: transparent;
+  border: none;
+  border-radius: 9px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--slate-600);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.support-type-btn:hover {
+  color: var(--slate-900);
+  background: rgba(15, 23, 42, 0.03);
+}
+.support-type-btn.active {
+  background: #ffffff;
+  color: var(--slate-900);
+  border: none !important;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06), 0 0 0 1px rgba(15, 23, 42, 0.02);
+}
+.support-input-wrapper, .support-field-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.support-input-icon {
+  position: absolute;
+  left: 14px;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: color 0.15s ease;
+}
+.support-input-text {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px 0 42px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  color: var(--slate-900);
+  transition: all 0.15s ease;
+  outline: none;
+  background: #f8fafc;
+}
+.support-input-text:focus {
+  border-color: var(--amber);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.15);
+}
+.support-input-text:focus + .support-input-icon,
+.support-input-wrapper:focus-within .support-input-icon,
+.support-field-wrapper:focus-within .support-input-icon {
+  color: var(--amber-dark);
+}
+.support-input-text::placeholder {
+  color: #94a3b8;
+}
+.support-inputs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 600px) {
+  .support-inputs-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+.support-textarea {
+  width: 100%;
+  min-height: 110px;
+  padding: 12px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  color: var(--slate-900);
+  transition: all 0.15s ease;
+  outline: none;
+  resize: vertical;
+  background: #f8fafc;
+}
+.support-textarea:focus {
+  border-color: var(--amber);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.15);
+}
+.support-textarea::placeholder {
+  color: #94a3b8;
+}
+.support-submit-btn {
+  width: 100%;
+  height: 48px;
+  background: var(--amber);
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--slate-900);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  box-shadow: 0 4px 12px rgba(245, 166, 35, 0.2);
+}
+.support-submit-btn:hover {
+  background: var(--amber-dark);
+  box-shadow: 0 6px 16px rgba(217, 119, 6, 0.3);
+  transform: translateY(-1px);
+}
+.support-submit-btn:active {
+  transform: translateY(0);
+}
+.support-submit-btn:disabled {
+  background: #cbd5e1;
+  color: #64748b;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* ===== FLOATING SUPPORT BUTTON ===== */
+.floating-support-btn {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  background: var(--slate-900);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  z-index: 1800;
+  transition: all 0.25s ease;
+}
+.floating-support-btn:hover {
+  background: #c5a359;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(197, 163, 89, 0.25);
+}
+.floating-support-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+@media (max-width: 768px) {
+  .floating-support-btn {
+    display: none !important;
+  }
+}
+@media (max-width: 400px) {
+  .support-contact-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-bottom: 12px;
+  }
+  .support-contact-label {
+    width: auto;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<div class="search-backdrop" id="search-backdrop" onclick="closeAllSearchDropdowns()"></div>
+
+<!-- NAV -->
+<nav class="topnav">
+  <a href="https://flatly.by" class="logo">
+    <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 3L4 12V24h6v-7h8v7h6V12L14 3z" stroke="#1A1A2E" stroke-width="2" stroke-linejoin="round" fill="none"/>
+      <circle cx="14" cy="15" r="2.5" fill="#F5A623"/>
+    </svg>
+    Flatly
+  </a>
+
+  <div class="searchbar">
+    <!-- City Segment -->
+    <div class="sb-seg sb-seg-city" style="position: relative;" onclick="toggleWhereDropdown(event)" onkeydown="if(event.key === 'Enter' || event.key === ' ') { toggleWhereDropdown(event); }" role="button" tabindex="0" aria-label="Выбрать город" aria-haspopup="true">
+      <span class="sb-seg-label">Город</span>
+      <span class="sb-seg-val" id="search-where-label">Вся Беларусь</span>
+      
+      <!-- Location Selector Dropdown -->
+      <div class="search-dropdown" id="search-where-dropdown">
+        <div class="search-dropdown-item active" onclick="selectSearchWhere('Вся Беларусь', event)">
+          <span class="checkmark">✓</span>
+          <span class="city-name">Вся Беларусь</span>
+        </div>
+        
+        <!-- крупные города -->
+        <div class="search-dropdown-group-title">крупные города</div>
+                  <div class="search-dropdown-item " onclick="selectSearchWhere('Минск', event)">
+            <span class="checkmark">✓</span>
+            <span class="city-name">Минск</span>
+          </div>
+                  <div class="search-dropdown-item " onclick="selectSearchWhere('Брест', event)">
+            <span class="checkmark">✓</span>
+            <span class="city-name">Брест</span>
+          </div>
+                  <div class="search-dropdown-item " onclick="selectSearchWhere('Гродно', event)">
+            <span class="checkmark">✓</span>
+            <span class="city-name">Гродно</span>
+          </div>
+                  <div class="search-dropdown-item " onclick="selectSearchWhere('Витебск', event)">
+            <span class="checkmark">✓</span>
+            <span class="city-name">Витебск</span>
+          </div>
+                  <div class="search-dropdown-item " onclick="selectSearchWhere('Гомель', event)">
+            <span class="checkmark">✓</span>
+            <span class="city-name">Гомель</span>
+          </div>
+                  <div class="search-dropdown-item " onclick="selectSearchWhere('Могилев', event)">
+            <span class="checkmark">✓</span>
+            <span class="city-name">Могилев</span>
+          </div>
+        
+        <!-- Области -->
+        <div class="search-dropdown-group-title">Области</div>
+                          <div class="search-dropdown-item " onclick="selectSearchWhere('Брестская область', event)">
+            <span class="checkmark">✓</span>
+            <span class="city-name">Брестская область</span>
+          </div>
+                  <div class="search-dropdown-item " onclick="selectSearchWhere('Витебская область', event)">
+            <span class="checkmark">✓</span>
+            <span class="city-name">Витебская область</span>
+          </div>
+                  <div class="search-dropdown-item " onclick="selectSearchWhere('Гомельская область', event)">
+            <span class="checkmark">✓</span>
+            <span class="city-name">Гомельская область</span>
+          </div>
+                  <div class="search-dropdown-item " onclick="selectSearchWhere('Гродненская область', event)">
+            <span class="checkmark">✓</span>
+            <span class="city-name">Гродненская область</span>
+          </div>
+                  <div class="search-dropdown-item " onclick="selectSearchWhere('Минская область', event)">
+            <span class="checkmark">✓</span>
+            <span class="city-name">Минская область</span>
+          </div>
+                  <div class="search-dropdown-item " onclick="selectSearchWhere('Могилевская область', event)">
+            <span class="checkmark">✓</span>
+            <span class="city-name">Могилевская область</span>
+          </div>
+        
+        <!-- Остальные города -->
+                  <div class="search-dropdown-group-title">Остальные города</div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Барановичи', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Барановичи</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Белоозёрск', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Белоозёрск</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Березино', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Березино</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Берёза', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Берёза</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Бобруйск', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Бобруйск</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Борисов', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Борисов</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Брагин', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Брагин</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Буда-Кошелево', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Буда-Кошелево</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Верхнедвинск', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Верхнедвинск</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Вилейка', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Вилейка</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Волковыск', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Волковыск</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Воложин', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Воложин</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Ганцевичи', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Ганцевичи</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Глубокое', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Глубокое</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Глуск', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Глуск</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Горки', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Горки</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Дзержинск', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Дзержинск</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Добруш', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Добруш</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Докшицы', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Докшицы</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Другой', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Другой</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Дружный', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Дружный</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Дятлово', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Дятлово</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Ельск', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Ельск</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Жабинка', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Жабинка</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Житковичи', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Житковичи</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Жлобин', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Жлобин</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Жодино', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Жодино</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Жодино Минская обл.', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Жодино Минская обл.</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Зельва', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Зельва</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Иваново', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Иваново</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Ивацевичи', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Ивацевичи</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Ивье', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Ивье</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Калинковичи', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Калинковичи</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Каменец', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Каменец</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Клецк', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Клецк</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Климовичи', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Климовичи</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Кобрин', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Кобрин</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Корма', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Корма</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Костюковичи', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Костюковичи</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Кричев', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Кричев</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Крупки', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Крупки</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Лельчицы', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Лельчицы</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Лепель', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Лепель</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Лида', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Лида</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Логойск', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Логойск</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Лоев', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Лоев</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Лунинец', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Лунинец</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Лунинец, Лунинецкий, Брестская область, Беларусь', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Лунинец, Лунинецкий, Брестская область, Беларусь</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Любань', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Любань</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Ляховичи', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Ляховичи</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Марьина Горка', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Марьина Горка</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Мачулищи', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Мачулищи</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Микашевичи', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Микашевичи</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Миоры', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Миоры</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Мозырь', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Мозырь</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Молодечно', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Молодечно</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Мосты', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Мосты</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Мстиславль', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Мстиславль</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Мядель', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Мядель</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Несвиж', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Несвиж</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Новогрудок', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Новогрудок</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Новолукомль', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Новолукомль</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Новополоцк', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Новополоцк</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Орша', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Орша</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Осиповичи', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Осиповичи</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Островец', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Островец</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Ошмяны', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Ошмяны</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Петриков', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Петриков</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Пинск', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Пинск</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Полоцк', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Полоцк</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Поставы', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Поставы</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Пружаны', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Пружаны</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Речица', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Речица</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Рогачёв', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Рогачёв</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Светлогорск', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Светлогорск</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Свислочь', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Свислочь</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Сенно', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Сенно</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Слоним', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Слоним</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Слуцк', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Слуцк</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Смолевичи', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Смолевичи</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Сморгонь', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Сморгонь</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Солигорск', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Солигорск</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Старые Дороги', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Старые Дороги</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Столбцы', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Столбцы</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Столин', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Столин</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Узда', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Узда</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Фаниполь', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Фаниполь</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Хойники', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Хойники</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Хотимск', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Хотимск</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Чечерск', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Чечерск</span>
+            </div>
+                      <div class="search-dropdown-item " onclick="selectSearchWhere('Щучин', event)">
+              <span class="checkmark">✓</span>
+              <span class="city-name">Щучин</span>
+            </div>
+                        </div>
+    </div>
+
+    <div class="sb-div"></div>
+
+    <!-- Object Type Segment -->
+    <div class="sb-seg sb-seg-type" style="position: relative;" onclick="toggleSearchTypeDropdown(event)" onkeydown="if(event.key === 'Enter' || event.key === ' ') { toggleSearchTypeDropdown(event); }" role="button" tabindex="0" aria-label="Выбрать тип жилья" aria-haspopup="true">
+      <span class="sb-seg-label">Тип</span>
+      <span class="sb-seg-val" id="search-type-label">Любой тип</span>
+      
+      <!-- Type Dropdown -->
+      <div class="search-dropdown" id="search-type-dropdown">
+        <div class="search-dropdown-item active" data-type="all" onclick="selectSearchType('all', 'Любой тип', event)">
+          <span class="checkmark">✓</span>
+          <span class="type-name">Любой тип</span>
+        </div>
+        <div class="search-dropdown-item" data-type="apartment" onclick="selectSearchType('apartment', 'Квартира', event)">
+          <span class="checkmark">✓</span>
+          <span class="type-name">Квартира</span>
+        </div>
+        <div class="search-dropdown-item" data-type="cottage" onclick="selectSearchType('cottage', 'Коттедж', event)">
+          <span class="checkmark">✓</span>
+          <span class="type-name">Коттедж</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sb-div"></div>
+
+    <!-- Rooms Segment -->
+    <div class="sb-seg sb-seg-rooms" style="position: relative;" onclick="toggleSearchRoomsDropdown(event)" onkeydown="if(event.key === 'Enter' || event.key === ' ') { toggleSearchRoomsDropdown(event); }" role="button" tabindex="0" aria-label="Выбрать количество комнат" aria-haspopup="true">
+      <span class="sb-seg-label">Комнат</span>
+      <span class="sb-seg-val" id="search-rooms-label">Любое</span>
+      
+      <!-- Rooms Dropdown -->
+      <div class="search-dropdown" id="search-rooms-dropdown">
+        <div class="search-dropdown-item active" data-rooms="all" onclick="selectSearchRooms(0, 'Любое', event)">
+          <span class="checkmark">✓</span>
+          <span class="rooms-name">Любое</span>
+        </div>
+        <div class="search-dropdown-item" data-rooms="1" onclick="selectSearchRooms(1, '1 комната', event)">
+          <span class="checkmark">✓</span>
+          <span class="rooms-name">1 комната</span>
+        </div>
+        <div class="search-dropdown-item" data-rooms="2" onclick="selectSearchRooms(2, '2 комнаты', event)">
+          <span class="checkmark">✓</span>
+          <span class="rooms-name">2 комнаты</span>
+        </div>
+        <div class="search-dropdown-item" data-rooms="3" onclick="selectSearchRooms(3, '3 комнаты', event)">
+          <span class="checkmark">✓</span>
+          <span class="rooms-name">3 комнаты</span>
+        </div>
+        <div class="search-dropdown-item" data-rooms="4" onclick="selectSearchRooms(4, '4+ комнат', event)">
+          <span class="checkmark">✓</span>
+          <span class="rooms-name">4+ комнат</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sb-div"></div>
+
+    <!-- Price Segment -->
+    <div class="sb-seg sb-seg-price" style="position: relative;" onclick="toggleSearchPriceDropdown(event)" onkeydown="if(event.key === 'Enter' || event.key === ' ') { toggleSearchPriceDropdown(event); }" role="button" tabindex="0" aria-label="Фильтр цены" aria-haspopup="true">
+      <span class="sb-seg-label" title="Цена">
+        <svg viewBox="0 0 24 24" class="sb-icon"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+      </span>
+      <span class="sb-seg-val" id="search-price-label">Любая</span>
+      
+      <!-- Price Dropdown -->
+      <div class="search-dropdown" id="search-price-dropdown" style="width: 250px; padding: 16px; cursor: default;" onclick="event.stopPropagation()">
+        <span style="font-size: 12px; font-weight: 700; color: var(--slate-900); display: block; margin-bottom: 8px;">Цена за сутки (Б̶)</span>
+        <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 12px;">
+          <input type="number" id="search-price-min" placeholder="от" min="0" aria-label="Минимальная цена поиска" style="width: 100%; height: 36px; border: 1px solid var(--border); border-radius: 8px; padding: 0 10px; font-size: 13px; outline: none; box-sizing: border-box;">
+          <span style="color: var(--gray-text);">—</span>
+          <input type="number" id="search-price-max" placeholder="до" min="0" aria-label="Максимальная цена поиска" style="width: 100%; height: 36px; border: 1px solid var(--border); border-radius: 8px; padding: 0 10px; font-size: 13px; outline: none; box-sizing: border-box;">
+        </div>
+        <div style="display: flex; justify-content: flex-end;">
+          <button class="sb-dropdown-btn" onclick="applySearchPrice(event)">Применить</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sb-div"></div>
+
+    <!-- Guests Segment -->
+    <div class="sb-seg sb-seg-guests" style="position: relative;" onclick="toggleSearchGuestsDropdown(event)" onkeydown="if(event.key === 'Enter' || event.key === ' ') { toggleSearchGuestsDropdown(event); }" role="button" tabindex="0" aria-label="Количество гостей" aria-haspopup="true">
+      <span class="sb-seg-label" title="Количество гостей">
+        <svg viewBox="0 0 24 24" class="sb-icon"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </span>
+      <span class="sb-seg-val" id="search-guests-label">Любое</span>
+      
+      <!-- Guests Selector Dropdown -->
+      <div class="search-dropdown" id="search-guests-dropdown" style="width: 230px; padding: 16px; cursor: default;" onclick="event.stopPropagation()">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+          <span style="font-size: 13.5px; font-weight: 700; color: var(--slate-900);">Количество гостей</span>
+          <div class="guests-selector" style="height: 38px; width: 110px; display: flex; align-items: center; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; background: var(--white);">
+            <button onclick="changeSearchGuests(-1, event)" aria-label="Уменьшить количество гостей поиска" style="width: 34px; height: 100%; border: none; background: transparent; cursor: pointer; font-size: 16px; color: var(--slate-900);">-</button>
+            <span id="search-guests-val" style="flex: 1; text-align: center; font-size: 13px; font-weight: 600; color: var(--slate-900);">Любое</span>
+            <button onclick="changeSearchGuests(1, event)" aria-label="Увеличить количество гостей поиска" style="width: 34px; height: 100%; border: none; background: transparent; cursor: pointer; font-size: 16px; color: var(--slate-900);">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter Button inside Searchbar -->
+    <button class="sb-filter-btn" type="button" aria-label="Фильтры" onclick="openSearchFilterModal(event)">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="4" y1="6" x2="20" y2="6"/>
+        <line x1="8" y1="12" x2="16" y2="12"/>
+        <line x1="11" y1="18" x2="13" y2="18"/>
+      </svg>
+    </button>
+
+    <!-- Search Button -->
+    <button class="sb-btn" aria-label="Поиск" onclick="submitSearchbar(event)">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+    </button>
+  </div>
+
+  <div class="nav-right">
+    <!-- "Связаться с нами" Dropdown Button -->
+    <div class="nav-contact-selector" id="nav-contact-btn" onclick="toggleContactDropdown(event)">
+      <button class="nav-contact-btn" aria-label="Связаться или показать контакты">
+        <svg class="contact-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 2px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="contact-text-full">Связаться с нами</span>
+        <span class="contact-text-short">Контакты</span>
+        <svg class="chevron-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round"><path d="m1 1 4 4 4-4"/></svg>
+      </button>
+      <div class="nav-contact-dropdown" id="nav-contact-dropdown">
+        <a href="tel:+375296045015" class="contact-dropdown-item phone-item">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+375 (29) 604-50-15</span>
+        </a>
+        <div class="contact-dropdown-divider"></div>
+        <div class="contact-dropdown-messengers">
+          <a href="https://t.me/byejey1" target="_blank" class="messenger-link tg" title="Telegram">
+            <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.87 4.326-2.96-.924c-.643-.204-.658-.643.136-.953l11.57-4.46c.537-.204.997.12.825.861z"/></svg>
+            <span>Telegram</span>
+          </a>
+          <a href="viber://chat?number=%2B375296045015" class="messenger-link vb" title="Viber">
+            <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M11.398.002C9.473.028 5.331.344 3.014 2.467 1.294 4.177.693 6.698.623 9.82c-.06 3.11-.13 8.95 5.5 10.541v2.42s-.038.97.602 1.17c.79.25 1.24-.499 1.99-1.299l1.4-1.58c3.85.32 6.8-.419 7.14-.529.78-.25 5.181-.811 5.901-6.652.74-6.031-.36-9.831-2.34-11.551l-.01-.002c-.6-.55-3-2.3-8.37-2.32 0 0-.396-.025-1.038-.016zm.067 1.697c.545-.003.88.02.88.02 4.54.01 6.711 1.38 7.221 1.84 1.67 1.429 2.528 4.856 1.9 9.892-.6 4.88-4.17 5.19-4.83 5.4-.28.09-2.88.73-6.152.52 0 0-2.439 2.941-3.199 3.701-.12.13-.26.17-.35.15-.13-.03-.17-.19-.16-.41l.02-4.019c-4.771-1.32-4.491-6.302-4.441-8.902.06-2.6.55-4.732 2-6.172 1.957-1.77 5.475-2.01 7.11-2.02zm.36 2.6a.299.299 0 0 0-.3.299.3.3 0 0 0 .3.3 5.631 5.631 0 0 1 4.03 1.59c1.09 1.06 1.621 2.48 1.641 4.34a.3.3 0 0 0 .3.3v-.009a.3.3 0 0 0 .3-.3 6.451 6.451 0 0 0-1.81-4.76c-1.19-1.16-2.692-1.76-4.462-1.76zm-3.954.69a.955.955 0 0 0-.615.12h-.012c-.41.24-.788.54-1.148.94-.27.32-.421.639-.461.949a1.24 1.24 0 0 0 .05.541l.02.01a13.722 13.722 0 0 0 1.2 2.6 15.383 15.383 0 0 0 2.32 3.171l.03.04.04.03.03.03.03.03a15.603 15.603 0 0 0 3.18 2.33c1.32.72 2.122 1.06 2.602 1.2v.01c.14.04.268.06.398.06a1.84 1.84 0 0 0 1.102-.472c.39-.35.7-.738.93-1.148v-.01c.23-.43.15-.841-.18-1.121a13.632 13.632 0 0 0-2.15-1.54c-.51-.28-1.03-.11-1.24.17l-.45.569c-.23.28-.65.24-.65.24l-.012.01c-3.12-.8-3.95-3.959-3.95-3.959s-.04-.43.25-.65l.56-.45c.27-.22.46-.74.17-1.25a13.522 13.522 0 0 0-1.54-2.15.843.843 0 0 0-.504-.3zm4.473.89a.3.3 0 0 0 .002.6 3.78 3.78 0 0 1 2.65 1.15 3.5 3.5 0 0 1 .9 2.57.3.3 0 0 0 .3.299l.01.012a.3.3 0 0 0 .3-.301c.03-1.19-.34-2.19-1.07-2.99-.73-.8-1.75-1.25-3.05-1.34a.3.3 0 0 0-.042 0zm.49 1.619a.305.305 0 0 0-.018.611c.99.05 1.47.55 1.53 1.58a.3.3 0 0 0 .3.29h.01a.3.3 0 0 0 .29-.32c-.07-1.34-.8-2.091-2.1-2.161a.305.305 0 0 0-.012 0z"/></svg>
+            <span>Viber</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <a href="https://flatly.by/favorites" class="nav-fav-link" id="header-fav-link" title="Избранное" aria-label="Избранное">
+      <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+      <span class="fav-counter" id="header-fav-counter" style="display: none;">0</span>
+    </a>
+
+    <a href="https://flatly.by/listings/create" class="nav-create-btn" aria-label="Разместить объявление о сдаче жилья">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+      <span class="create-text-full">Подать за 0 <span class="header-submit-currency-symbol">Б̶</span></span>
+      <span class="create-text-short">Подать</span>
+    </a>
+    
+    <!-- Currency Selector Dropdown -->
+    <div class="currency-selector" id="currency-selector-btn" onclick="toggleCurrencyDropdown(event)">
+      <button class="currency-btn">
+        <span class="currency-label">Валюта:</span>
+        <span id="active-currency-symbol">Б̶</span>
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round"><path d="m1 1 4 4 4-4"/></svg>
+      </button>
+      <div class="currency-dropdown" id="currency-dropdown">
+        <div class="dropdown-item" data-code="BYN" onclick="selectCurrency('BYN', 'Б̶', event)">
+          <span class="checkmark">✓</span>
+          <span class="currency-name">Б̶ (BYN)</span>
+        </div>
+        <div class="dropdown-item" data-code="USD" onclick="selectCurrency('USD', '$', event)">
+          <span class="checkmark">✓</span>
+          <span class="currency-name">$ (USD)</span>
+        </div>
+        <div class="dropdown-item" data-code="EUR" onclick="selectCurrency('EUR', '€', event)">
+          <span class="checkmark">✓</span>
+          <span class="currency-name">€ (EUR)</span>
+        </div>
+        <div class="dropdown-item" data-code="RUB" onclick="selectCurrency('RUB', '₽', event)">
+          <span class="checkmark">✓</span>
+          <span class="currency-name">₽ (RUB)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-user" id="nav-user-btn" onclick="toggleDropdown(event)" onkeydown="if(event.key === 'Enter' || event.key === ' ') { toggleDropdown(event); }" role="button" tabindex="0" aria-label="Меню пользователя" aria-haspopup="true" aria-expanded="false">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+      <div class="avatar">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      </div>
+      
+      <!-- Floating Dropdown Menu -->
+      <div class="user-dropdown" id="user-dropdown">
+                              <a href="https://flatly.by/login" class="dropdown-item fw-600">Войти</a>
+                    <a href="https://flatly.by/listings/create" class="dropdown-item">Разместить жильё</a>
+          <a href="javascript:void(0)" onclick="openSupportModal()" class="dropdown-item">Поддержка</a>
+          <div class="dropdown-divider"></div>
+                      <a href="https://flatly.by/privacy" class="dropdown-item">Конфиденциальность</a>
+                        </div>
+
+    </div>
+  </div>
+
+  <form id="logout-form" action="https://flatly.by/logout" method="POST" style="display: none;">
+    <input type="hidden" name="_token" value="hKhzvGhYgfT6sMxVpYlSDUxrTqGgXd1mW3uLq4KS" autocomplete="off">  </form>
+</nav>
+
+<div class="content-wrapper">
+  <main>
+    <div class="sitemap-container">
+  
+  <header class="sitemap-header">
+    <h1>Карта сайта</h1>
+    <p>Навигация по разделам, городам и статьям блога Flatly.by. Найдите нужную информацию в один клик.</p>
+  </header>
+
+  <div class="sitemap-grid">
+    
+    <!-- 1. Основные разделы -->
+    <div class="sitemap-card">
+      <h2>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Основные разделы
+      </h2>
+      <ul class="sitemap-links">
+        <li><a href="https://flatly.by">Главная страница</a></li>
+        <li><a href="https://flatly.by/apartments">Квартиры посуточно</a></li>
+        <li><a href="https://flatly.by/cottages">Коттеджи и усадьбы</a></li>
+        <li><a href="https://flatly.by/hourly">Почасовая аренда</a></li>
+        <li><a href="https://flatly.by/favorites">Избранные объявления</a></li>
+        <li><a href="https://flatly.by/listings/create">Подать объявление (бесплатно)</a></li>
+        <li><a href="https://flatly.by/login">Личный кабинет / Авторизация</a></li>
+        <li><a href="https://flatly.by/blog">Блог и гид по Беларуси</a></li>
+      </ul>
+    </div>
+
+    <!-- 2. Помощь и информация -->
+    <div class="sitemap-card">
+      <h2>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        Помощь и инфо
+      </h2>
+      <ul class="sitemap-links">
+        <li><a href="https://flatly.by/how-it-works">Как работает сервис</a></li>
+        <li><a href="https://flatly.by/rules">Правила размещения объявлений</a></li>
+        <li><a href="https://flatly.by/contacts">Контакты и поддержка</a></li>
+        <li><a href="https://flatly.by/privacy">Политика конфиденциальности</a></li>
+        <li><a href="https://flatly.by/privacy#offer">Договор публичной оферты</a></li>
+        <li><a href="https://flatly.by/privacy#cookies">Политика файлов Cookie</a></li>
+        <li><a href="/sitemap.xml" target="_blank">XML Sitemap (для поисковиков)</a></li>
+      </ul>
+    </div>
+
+    <!-- 3. Популярные типы -->
+    <div class="sitemap-card">
+      <h2>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        Поиск по категориям
+      </h2>
+      <ul class="sitemap-links">
+        <li><a href="/apartments">Квартиры посуточно во всех городах</a></li>
+        <li><a href="/cottages">Коттеджи посуточно во всех городах</a></li>
+        <li><a href="/hourly">Почасовая аренда во всех городах</a></li>
+        <li><a href="/?rooms=1">1-комнатные квартиры</a></li>
+        <li><a href="/?rooms=2">2-комнатные квартиры</a></li>
+        <li><a href="/?rooms=3">3-комнатные квартиры</a></li>
+        <li><a href="/?rooms=4">4+ комнатные квартиры</a></li>
+      </ul>
+    </div>
+
+    <!-- 4. Города (Широкая карточка) -->
+    <div class="sitemap-card full-width">
+      <h2>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Города с объявлениями
+      </h2>
+      <p style="font-size: 13.5px; color: var(--gray-text); margin-bottom: 16px;">Выберите интересующий вас город для поиска прямых контактов арендодателей:</p>
+      <div class="cities-subgrid">
+                
+        <!-- Крупные областные центры -->
+                  <div style="font-weight: 700;">
+            <a href="/minsk" style="color: var(--slate-900); text-decoration: none;">Минск</a>
+          </div>
+                  <div style="font-weight: 700;">
+            <a href="/brest" style="color: var(--slate-900); text-decoration: none;">Брест</a>
+          </div>
+                  <div style="font-weight: 700;">
+            <a href="/grodno" style="color: var(--slate-900); text-decoration: none;">Гродно</a>
+          </div>
+                  <div style="font-weight: 700;">
+            <a href="/vitebsk" style="color: var(--slate-900); text-decoration: none;">Витебск</a>
+          </div>
+                  <div style="font-weight: 700;">
+            <a href="/gomel" style="color: var(--slate-900); text-decoration: none;">Гомель</a>
+          </div>
+                  <div style="font-weight: 700;">
+            <a href="/mogilev" style="color: var(--slate-900); text-decoration: none;">Могилев</a>
+          </div>
+        
+        <!-- Другие города, где есть объявления -->
+                              <div>
+              <a href="/baranovichi" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Барановичи</a>
+            </div>
+                                        <div>
+              <a href="/beloozersk" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Белоозёрск</a>
+            </div>
+                                        <div>
+              <a href="/berezino" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Березино</a>
+            </div>
+                                        <div>
+              <a href="/bereza" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Берёза</a>
+            </div>
+                                        <div>
+              <a href="/bobruysk" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Бобруйск</a>
+            </div>
+                                        <div>
+              <a href="/borisov" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Борисов</a>
+            </div>
+                                        <div>
+              <a href="/bragin" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Брагин</a>
+            </div>
+                                                          <div>
+              <a href="/brestskaya-oblast" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Брестская область</a>
+            </div>
+                                        <div>
+              <a href="/buda-koshelevo" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Буда-Кошелево</a>
+            </div>
+                                        <div>
+              <a href="/verkhnedvinsk" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Верхнедвинск</a>
+            </div>
+                                        <div>
+              <a href="/vileyka" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Вилейка</a>
+            </div>
+                                                          <div>
+              <a href="/vitebskaya-oblast" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Витебская область</a>
+            </div>
+                                        <div>
+              <a href="/volkovysk" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Волковыск</a>
+            </div>
+                                        <div>
+              <a href="/volozhin" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Воложин</a>
+            </div>
+                                        <div>
+              <a href="/gantsevichi" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Ганцевичи</a>
+            </div>
+                                        <div>
+              <a href="/glubokoe" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Глубокое</a>
+            </div>
+                                        <div>
+              <a href="/glusk" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Глуск</a>
+            </div>
+                                                          <div>
+              <a href="/gomelskaya-oblast" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Гомельская область</a>
+            </div>
+                                        <div>
+              <a href="/gorki" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Горки</a>
+            </div>
+                                        <div>
+              <a href="/grodnenskaya-oblast" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Гродненская область</a>
+            </div>
+                                                          <div>
+              <a href="/dzerzhinsk" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Дзержинск</a>
+            </div>
+                                        <div>
+              <a href="/dobrush" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Добруш</a>
+            </div>
+                                        <div>
+              <a href="/dokshitsy" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Докшицы</a>
+            </div>
+                                        <div>
+              <a href="/drugoy" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Другой</a>
+            </div>
+                                        <div>
+              <a href="/druzhny" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Дружный</a>
+            </div>
+                                        <div>
+              <a href="/dyatlovo" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Дятлово</a>
+            </div>
+                                        <div>
+              <a href="/yelsk" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Ельск</a>
+            </div>
+                                        <div>
+              <a href="/zhabinka" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Жабинка</a>
+            </div>
+                                        <div>
+              <a href="/zhitkovichi" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Житковичи</a>
+            </div>
+                                        <div>
+              <a href="/zhlobin" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Жлобин</a>
+            </div>
+                                        <div>
+              <a href="/zhodino" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Жодино</a>
+            </div>
+                                        <div>
+              <a href="/zhodino-minskaya-obl" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Жодино Минская обл.</a>
+            </div>
+                                        <div>
+              <a href="/zelva" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Зельва</a>
+            </div>
+                                        <div>
+              <a href="/ivanovo" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Иваново</a>
+            </div>
+                                        <div>
+              <a href="/ivatsevichi" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Ивацевичи</a>
+            </div>
+                                        <div>
+              <a href="/ivye" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Ивье</a>
+            </div>
+                                        <div>
+              <a href="/kalinkovichi" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Калинковичи</a>
+            </div>
+                                        <div>
+              <a href="/kamenets" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Каменец</a>
+            </div>
+                                        <div>
+              <a href="/kletsk" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Клецк</a>
+            </div>
+                                        <div>
+              <a href="/klimovichi" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Климовичи</a>
+            </div>
+                                        <div>
+              <a href="/kobrin" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Кобрин</a>
+            </div>
+                                        <div>
+              <a href="/korma" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Корма</a>
+            </div>
+                                        <div>
+              <a href="/kostyukovichi" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Костюковичи</a>
+            </div>
+                                        <div>
+              <a href="/krichev" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Кричев</a>
+            </div>
+                                        <div>
+              <a href="/krupki" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Крупки</a>
+            </div>
+                                        <div>
+              <a href="/lelchitsy" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Лельчицы</a>
+            </div>
+                                        <div>
+              <a href="/lepel" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Лепель</a>
+            </div>
+                                        <div>
+              <a href="/lida" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Лида</a>
+            </div>
+                                        <div>
+              <a href="/logoysk" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Логойск</a>
+            </div>
+                                        <div>
+              <a href="/loev" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Лоев</a>
+            </div>
+                                        <div>
+              <a href="/luninets" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Лунинец</a>
+            </div>
+                                        <div>
+              <a href="/luninets-luninetskiy-brestskaya-oblast-belarus" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Лунинец, Лунинецкий, Брестская область, Беларусь</a>
+            </div>
+                                        <div>
+              <a href="/lyuban" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Любань</a>
+            </div>
+                                        <div>
+              <a href="/lyakhovichi" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Ляховичи</a>
+            </div>
+                                        <div>
+              <a href="/maryina-gorka" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Марьина Горка</a>
+            </div>
+                                        <div>
+              <a href="/machulishchi" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Мачулищи</a>
+            </div>
+                                        <div>
+              <a href="/mikashevichi" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Микашевичи</a>
+            </div>
+                                                          <div>
+              <a href="/minskaya-oblast" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Минская область</a>
+            </div>
+                                        <div>
+              <a href="/miory" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Миоры</a>
+            </div>
+                                                          <div>
+              <a href="/mogilev" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Могилёв</a>
+            </div>
+                                        <div>
+              <a href="/mozyr" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Мозырь</a>
+            </div>
+                                        <div>
+              <a href="/molodechno" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Молодечно</a>
+            </div>
+                                        <div>
+              <a href="/mosty" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Мосты</a>
+            </div>
+                                        <div>
+              <a href="/mstislavl" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Мстиславль</a>
+            </div>
+                                        <div>
+              <a href="/myadel" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Мядель</a>
+            </div>
+                                        <div>
+              <a href="/nesvizh" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Несвиж</a>
+            </div>
+                                        <div>
+              <a href="/novogrudok" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Новогрудок</a>
+            </div>
+                                        <div>
+              <a href="/novolukoml" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Новолукомль</a>
+            </div>
+                                        <div>
+              <a href="/novopolotsk" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Новополоцк</a>
+            </div>
+                                        <div>
+              <a href="/orsha" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Орша</a>
+            </div>
+                                        <div>
+              <a href="/osipovichi" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Осиповичи</a>
+            </div>
+                                        <div>
+              <a href="/ostrovets" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Островец</a>
+            </div>
+                                        <div>
+              <a href="/oshmyany" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Ошмяны</a>
+            </div>
+                                        <div>
+              <a href="/petrikov" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Петриков</a>
+            </div>
+                                        <div>
+              <a href="/pinsk" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Пинск</a>
+            </div>
+                                        <div>
+              <a href="/polotsk" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Полоцк</a>
+            </div>
+                                        <div>
+              <a href="/postavy" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Поставы</a>
+            </div>
+                                        <div>
+              <a href="/pruzhany" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Пружаны</a>
+            </div>
+                                        <div>
+              <a href="/rechitsa" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Речица</a>
+            </div>
+                                        <div>
+              <a href="/rogachev" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Рогачёв</a>
+            </div>
+                                        <div>
+              <a href="/svetlogorsk" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Светлогорск</a>
+            </div>
+                                        <div>
+              <a href="/svisloch" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Свислочь</a>
+            </div>
+                                        <div>
+              <a href="/senno" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Сенно</a>
+            </div>
+                                        <div>
+              <a href="/slonim" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Слоним</a>
+            </div>
+                                        <div>
+              <a href="/slutsk" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Слуцк</a>
+            </div>
+                                        <div>
+              <a href="/smolevichi" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Смолевичи</a>
+            </div>
+                                        <div>
+              <a href="/smorgon" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Сморгонь</a>
+            </div>
+                                        <div>
+              <a href="/soligorsk" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Солигорск</a>
+            </div>
+                                        <div>
+              <a href="/starye-dorogi" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Старые Дороги</a>
+            </div>
+                                        <div>
+              <a href="/stolbtsy" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Столбцы</a>
+            </div>
+                                        <div>
+              <a href="/stolin" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Столин</a>
+            </div>
+                                        <div>
+              <a href="/uzda" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Узда</a>
+            </div>
+                                        <div>
+              <a href="/fanipol" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Фаниполь</a>
+            </div>
+                                        <div>
+              <a href="/khoyniki" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Хойники</a>
+            </div>
+                                        <div>
+              <a href="/khotimsk" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Хотимск</a>
+            </div>
+                                        <div>
+              <a href="/chechersk" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Чечерск</a>
+            </div>
+                                        <div>
+              <a href="/shchuchin" style="color: var(--slate-700); text-decoration: none; font-size: 13.5px;">Щучин</a>
+            </div>
+                        </div>
+    </div>
+
+    <!-- 5. Статьи блога (Широкая карточка) -->
+          <div class="sitemap-card full-width">
+        <h2>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          Гид по Беларуси (Последние статьи)
+        </h2>
+        <div class="blog-subgrid">
+                      <div class="blog-sitemap-item">
+              <a href="https://flatly.by/blog/kuda-poyti-s-detmi-v-minske" style="font-weight: 600; font-size: 14px; color: var(--slate-800); text-decoration: none;">
+                Куда пойти с детьми в Минске: готовый маршрут на 2 дня и где удобнее снять жилье
+              </a>
+                              <span>13 October 2026</span>
+                          </div>
+                      <div class="blog-sitemap-item">
+              <a href="https://flatly.by/blog/kak-vydelitsya-sredi-obyavleniy-posutochnoy-arendy" style="font-weight: 600; font-size: 14px; color: var(--slate-800); text-decoration: none;">
+                Как выделиться среди других объявлений посуточной аренды: честный гайд для владельцев
+              </a>
+                              <span>13 August 2026</span>
+                          </div>
+                      <div class="blog-sitemap-item">
+              <a href="https://flatly.by/blog/kogo-ne-stoit-zaselyat-v-kvartiru-posutochno" style="font-weight: 600; font-size: 14px; color: var(--slate-800); text-decoration: none;">
+                Кого не стоит заселять в квартиру посуточно: 7 типов проблемных арендаторов
+              </a>
+                              <span>27 July 2026</span>
+                          </div>
+                      <div class="blog-sitemap-item">
+              <a href="https://flatly.by/blog/kak-doekhat-iz-aeroporta-minska-v-gorod" style="font-weight: 600; font-size: 14px; color: var(--slate-800); text-decoration: none;">
+                Как добраться до квартиры из аэропорта Минск-2
+              </a>
+                              <span>26 July 2026</span>
+                          </div>
+                      <div class="blog-sitemap-item">
+              <a href="https://flatly.by/blog/chto-posmotret-v-nesvizhe-za-1-2-dnya" style="font-weight: 600; font-size: 14px; color: var(--slate-800); text-decoration: none;">
+                Что посмотреть в Несвиже за 1–2 дня: маршрут, локации и где лучше остановиться
+              </a>
+                              <span>25 July 2026</span>
+                          </div>
+                      <div class="blog-sitemap-item">
+              <a href="https://flatly.by/blog/ne-tolko-mirskij-zamok-chto-posmotret-v-mire" style="font-weight: 600; font-size: 14px; color: var(--slate-800); text-decoration: none;">
+                Не только Мирский замок: что посмотреть в Мире на выходных и где остановиться
+              </a>
+                              <span>25 July 2026</span>
+                          </div>
+                      <div class="blog-sitemap-item">
+              <a href="https://flatly.by/blog/chto-posmotret-v-breste-za-1-2-dnya" style="font-weight: 600; font-size: 14px; color: var(--slate-800); text-decoration: none;">
+                Что посмотреть в Бресте за 1–2 дня: маршрут, локации и где лучше остановиться
+              </a>
+                              <span>24 July 2026</span>
+                          </div>
+                      <div class="blog-sitemap-item">
+              <a href="https://flatly.by/blog/kak-avtomatizirovat-zaselenie-v-posutochnoy-arende" style="font-weight: 600; font-size: 14px; color: var(--slate-800); text-decoration: none;">
+                Как автоматизировать заселение в посуточной аренде?
+              </a>
+                              <span>19 July 2026</span>
+                          </div>
+                      <div class="blog-sitemap-item">
+              <a href="https://flatly.by/blog/chto-delat-esli-v-kvartire-slomalas-tehnika" style="font-weight: 600; font-size: 14px; color: var(--slate-800); text-decoration: none;">
+                Что делать, если в квартире сломалась техника?
+              </a>
+                              <span>19 July 2026</span>
+                          </div>
+                      <div class="blog-sitemap-item">
+              <a href="https://flatly.by/blog/na-chto-obratit-vnimanie-pri-osmotre-kvartiry" style="font-weight: 600; font-size: 14px; color: var(--slate-800); text-decoration: none;">
+                На что обратить внимание при осмотре квартиры?
+              </a>
+                              <span>19 July 2026</span>
+                          </div>
+                      <div class="blog-sitemap-item">
+              <a href="https://flatly.by/blog/gde-snyat-kvartiru-s-zhivotnymi-v-minske" style="font-weight: 600; font-size: 14px; color: var(--slate-800); text-decoration: none;">
+                Где снять квартиру с животными в Минске?
+              </a>
+                              <span>19 July 2026</span>
+                          </div>
+                      <div class="blog-sitemap-item">
+              <a href="https://flatly.by/blog/v-kakom-rajone-minska-luchshe-snyat-kvartiru" style="font-weight: 600; font-size: 14px; color: var(--slate-800); text-decoration: none;">
+                В каком районе Минска лучше снять квартиру?
+              </a>
+                              <span>19 July 2026</span>
+                          </div>
+                      <div class="blog-sitemap-item">
+              <a href="https://flatly.by/blog/chto-deshevle-kvartira-ili-otel-v-minske" style="font-weight: 600; font-size: 14px; color: var(--slate-800); text-decoration: none;">
+                Что дешевле: квартира или отель в Минске?
+              </a>
+                              <span>7 July 2026</span>
+                          </div>
+                      <div class="blog-sitemap-item">
+              <a href="https://flatly.by/blog/kakie-oshibki-dopuskayut-vladelcy-posutochnoy-arendy" style="font-weight: 600; font-size: 14px; color: var(--slate-800); text-decoration: none;">
+                Какие ошибки допускают владельцы посуточной аренды?
+              </a>
+                              <span>7 July 2026</span>
+                          </div>
+                      <div class="blog-sitemap-item">
+              <a href="https://flatly.by/blog/kak-podgotovit-kvartiru-k-posutochnoy-arende" style="font-weight: 600; font-size: 14px; color: var(--slate-800); text-decoration: none;">
+                Как подготовить квартиру к посуточной аренде?
+              </a>
+                              <span>7 July 2026</span>
+                          </div>
+                      <div class="blog-sitemap-item">
+              <a href="https://flatly.by/blog/kakie-pravila-zaseleniya-pri-posutochnoy-arende" style="font-weight: 600; font-size: 14px; color: var(--slate-800); text-decoration: none;">
+                Какие правила заселения при посуточной аренде?
+              </a>
+                              <span>6 July 2026</span>
+                          </div>
+                      <div class="blog-sitemap-item">
+              <a href="https://flatly.by/blog/kak-bezopasno-snyat-kvartiru-posutochno-minsk" style="font-weight: 600; font-size: 14px; color: var(--slate-800); text-decoration: none;">
+                Как безопасно снять квартиру посуточно в Минске: советы арендаторам
+              </a>
+                              <span>6 July 2026</span>
+                          </div>
+                  </div>
+      </div>
+    
+  </div>
+</div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+  <div style="max-width:1400px;margin:0 auto;">
+    <div class="footer-brand-section" style="margin-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 24px;">
+      <div class="footer-logo">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 3L4 12V24h6v-7h8v7h6V12L14 3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>
+          <circle cx="14" cy="15" r="2.5" fill="#F5A623"/>
+        </svg>
+        Flatly
+      </div>
+      <p class="footer-desc">Квартиры и коттеджи по всей Беларуси. Прямой контакт с арендодателями. Без онлайн-бронирований и комиссий.</p>
+      
+      <!-- Social Links -->
+      <div class="footer-socials">
+        <a href="https://t.me/byejey1" class="social-icon" target="_blank" aria-label="Telegram">
+          <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.87 4.326-2.96-.924c-.643-.204-.658-.643.136-.953l11.57-4.46c.537-.204.997.12.825.861z"/></svg>
+        </a>
+        <a href="https://instagram.com" class="social-icon" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+      </div>
+    </div>
+    
+    <div class="footer-grid">
+      <div>
+        <h4>Жильё</h4>
+        <ul>
+          <li><a href="/?type=apartments">Квартиры посуточно</a></li>
+          <li><a href="/?type=cottages">Коттеджи</a></li>
+          <li><a href="/?type=hourly">Почасовая аренда</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <h4>Города</h4>
+        <ul>
+          <li>
+                          <a href="/minsk">Минск</a>
+                      </li>
+          <li>
+                          <a href="/brest">Брест</a>
+                      </li>
+          <li>
+                          <a href="/grodno">Гродно</a>
+                      </li>
+          <li>
+                          <a href="/gomel">Гомель</a>
+                      </li>
+          <li>
+                          <a href="/vitebsk">Витебск</a>
+                      </li>
+          <li>
+                          <a href="/mogilev">Могилёв</a>
+                      </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Арендодателям</h4>
+        <ul>
+          <li><a href="https://flatly.by/listings/create">Подать объявление</a></li>
+          <li><a href="https://flatly.by/blog">Блог (Гид по Беларуси)</a></li>
+          <li><a href="https://flatly.by/rules">Правила размещения</a></li>
+          <li><a href="https://flatly.by/how-it-works">Как это работает</a></li>
+          <li><a href="https://flatly.by/contacts">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-bottom-info">
+        <div>
+          <p>© 2026 Flatly.by · Беларусь</p>
+          <p style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:6px;line-height:1.6;text-align:left;">ИП Лойко Евгений Юрьевич. УНП 693419408.<br>Свидетельство о государственной регистрации выдано Минским райисполкомом.<br>Адрес: Минский р-н, Щомыслицкий с/с, д. Богатырёво, ул. Минская, д. 2.<br>E-mail: loyko1012@gmail.com · Телефон: +375 (29) 604-50-15</p>
+        </div>
+        <div class="footer-bottom-links">
+          <a href="https://flatly.by/privacy#privacy">Политика конфиденциальности</a>
+          <a href="https://flatly.by/privacy#offer">Условия использования</a>
+          <a href="https://flatly.by/sitemap">Карта сайта</a>
+        </div>
+
+      </div>
+      
+      <!-- Trust/Payment Badges replaced with payment methods image -->
+      <div class="footer-payment-image">
+        <img src="/opla.png" alt="Способы оплаты" loading="lazy" style="max-height: 48px; width: auto; display: block; opacity: 0.85; transition: opacity 0.2s;" onmouseenter="this.style.opacity=1" onmouseleave="this.style.opacity=0.85">
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- COOKIE CONSENT BANNER (Belarus Law No. 99-Z) -->
+<div id="cookie-banner" class="cookie-banner">
+  <div class="cookie-content">
+    <div class="cookie-icon">🍪</div>
+    <div class="cookie-text">
+      Flatly.by использует файлы cookie для улучшения работы сайта в соответствии с Законом Республики Беларусь «О защите персональных данных». Вы можете согласиться с использованием всех файлов cookie или настроить их.
+              <a href="https://flatly.by/privacy" class="cookie-link">Политика конфиденциальности</a>
+          </div>
+
+  </div>
+  <div class="cookie-actions">
+    <button class="cookie-btn reject" onclick="acceptCookies('rejected')">Отклонить</button>
+    <button class="cookie-btn settings" onclick="showCookieSettings()">Настройки</button>
+    <button class="cookie-btn accept" onclick="acceptCookies('accepted')">Принять все</button>
+  </div>
+</div>
+
+<script>
+// Системные тосты
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 2500);
+}
+
+// Переключение дропдауна профиля
+function toggleDropdown(event) {
+  event.stopPropagation();
+  // Закрываем другие дропдауны
+  const contactDropdown = document.getElementById('nav-contact-dropdown');
+  if (contactDropdown) contactDropdown.classList.remove('show');
+  const currencyDropdown = document.getElementById('currency-dropdown');
+  if (currencyDropdown) currencyDropdown.classList.remove('show');
+  
+  const dropdown = document.getElementById('user-dropdown');
+  dropdown.classList.toggle('show');
+}
+
+// Переключение дропдауна контактов
+function toggleContactDropdown(event) {
+  event.stopPropagation();
+  // Закрываем другие дропдауны
+  const userDropdown = document.getElementById('user-dropdown');
+  if (userDropdown) userDropdown.classList.remove('show');
+  const currencyDropdown = document.getElementById('currency-dropdown');
+  if (currencyDropdown) currencyDropdown.classList.remove('show');
+  closeAllSearchDropdowns();
+  
+  const dropdown = document.getElementById('nav-contact-dropdown');
+  dropdown.classList.toggle('show');
+}
+
+// Закрытие всех поисковых дропдаунов
+function closeAllSearchDropdowns() {
+  const whereDropdown = document.getElementById('search-where-dropdown');
+  if (whereDropdown) whereDropdown.classList.remove('show');
+  const typeDropdown = document.getElementById('search-type-dropdown');
+  if (typeDropdown) typeDropdown.classList.remove('show');
+  const roomsDropdown = document.getElementById('search-rooms-dropdown');
+  if (roomsDropdown) roomsDropdown.classList.remove('show');
+  const priceDropdown = document.getElementById('search-price-dropdown');
+  if (priceDropdown) priceDropdown.classList.remove('show');
+  const guestsDropdown = document.getElementById('search-guests-dropdown');
+  if (guestsDropdown) guestsDropdown.classList.remove('show');
+  const backdrop = document.getElementById('search-backdrop');
+  if (backdrop) backdrop.classList.remove('show');
+}
+
+// Закрытие дропдаунов по клику вне их
+document.addEventListener('click', function(event) {
+  // Закрытие дропдауна пользователя
+  const dropdown = document.getElementById('user-dropdown');
+  const navUser = document.getElementById('nav-user-btn');
+  if (dropdown && dropdown.classList.contains('show') && navUser && !navUser.contains(event.target)) {
+    dropdown.classList.remove('show');
+  }
+
+  // Закрытие дропдауна контактов
+  const contactDropdown = document.getElementById('nav-contact-dropdown');
+  if (contactDropdown && contactDropdown.classList.contains('show') && !event.target.closest('#nav-contact-btn')) {
+    contactDropdown.classList.remove('show');
+  }
+
+  // Закрытие дропдауна валюты
+  const currencyDropdown = document.getElementById('currency-dropdown');
+  if (currencyDropdown && currencyDropdown.classList.contains('show') && !event.target.closest('#currency-selector-btn')) {
+    currencyDropdown.classList.remove('show');
+  }
+
+  // Закрытие поисковых дропдаунов при клике вне поисковой строки
+  if (!event.target.closest('.searchbar') && !event.target.closest('.search-dropdown')) {
+    closeAllSearchDropdowns();
+  }
+});
+
+// Глобальные обменные курсы и форматирование (База: BYN)
+var EXCHANGE_RATES = {
+  BYN: 1.0,
+  USD: 0.3077, // approx 3.25 BYN per USD
+  EUR: 0.2857, // approx 3.50 BYN per EUR
+  RUB: 27.5 // approx 90 RUB per USD / 2.75 BYN
+};
+
+var CURRENCY_SYMBOLS = {
+  BYN: 'Б̶',
+  USD: '$',
+  EUR: '€',
+  RUB: '₽'
+};
+
+var CURRENCY_FORMATS = {
+  BYN: (val) => `${Math.round(val)} Б̶`,
+  USD: (val) => `$${Math.round(val)}`,
+  EUR: (val) => `€${Math.round(val)}`,
+  RUB: (val) => `${Math.round(val).toLocaleString('ru-RU')} ₽`
+};
+
+// Переключение дропдауна валюты
+function toggleCurrencyDropdown(event) {
+  event.stopPropagation();
+  // Закрываем другие дропдауны
+  const userDropdown = document.getElementById('user-dropdown');
+  const typeDropdown = document.getElementById('search-type-dropdown');
+  const whereDropdown = document.getElementById('search-where-dropdown');
+  const roomsDropdown = document.getElementById('search-rooms-dropdown');
+  const priceDropdown = document.getElementById('search-price-dropdown');
+  const guestsDropdown = document.getElementById('search-guests-dropdown');
+  const contactDropdown = document.getElementById('nav-contact-dropdown');
+  if (userDropdown) userDropdown.classList.remove('show');
+  if (typeDropdown) typeDropdown.classList.remove('show');
+  if (whereDropdown) whereDropdown.classList.remove('show');
+  if (roomsDropdown) roomsDropdown.classList.remove('show');
+  if (priceDropdown) priceDropdown.classList.remove('show');
+  if (guestsDropdown) guestsDropdown.classList.remove('show');
+  if (contactDropdown) contactDropdown.classList.remove('show');
+
+  const dropdown = document.getElementById('currency-dropdown');
+  const isShow = dropdown.classList.contains('show');
+  
+  if (!isShow) {
+    const activeCode = localStorage.getItem('flatly_currency') || 'BYN';
+    dropdown.querySelectorAll('.dropdown-item').forEach(item => {
+      const itemCode = item.getAttribute('data-code');
+      if (itemCode === activeCode) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    });
+  }
+
+  dropdown.classList.toggle('show');
+}
+
+// Выбор валюты
+function selectCurrency(code, symbol, event) {
+  if (event) event.stopPropagation();
+  localStorage.setItem('flatly_currency', code);
+  document.getElementById('active-currency-symbol').textContent = symbol;
+  document.getElementById('currency-dropdown').classList.remove('show');
+  
+  // Обновляем активный чекмарк
+  document.querySelectorAll('#currency-dropdown .dropdown-item').forEach(item => {
+    const itemCode = item.getAttribute('data-code');
+    if (itemCode === code) {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
+    }
+  });
+
+  // Вызываем функции конвертации на текущей странице, если они есть
+  if (typeof updateCurrencyDisplay === 'function') {
+    updateCurrencyDisplay();
+  }
+  if (typeof updateMapPrices === 'function') {
+    updateMapPrices();
+  }
+  
+  showToast('Валюта изменена на ' + symbol + ' (' + code + ')');
+}
+
+// Глобальная функция обновления отображения цен в выбранной валюте
+function updateCurrencyDisplay() {
+  try {
+    const currentCurrency = localStorage.getItem('flatly_currency') || 'BYN';
+    const rate = (typeof EXCHANGE_RATES !== 'undefined' && EXCHANGE_RATES[currentCurrency]) ? EXCHANGE_RATES[currentCurrency] : 1.0;
+    const symbol = (typeof CURRENCY_SYMBOLS !== 'undefined' && CURRENCY_SYMBOLS[currentCurrency]) ? CURRENCY_SYMBOLS[currentCurrency] : 'Б̶';
+    const formatFn = (typeof CURRENCY_FORMATS !== 'undefined' && CURRENCY_FORMATS[currentCurrency]) ? CURRENCY_FORMATS[currentCurrency] : (v => `${Math.round(v)} Б̶`);
+
+    // 1. Обновляем активный символ валюты в шапке
+    const activeSymbolEl = document.getElementById('active-currency-symbol');
+    if (activeSymbolEl) {
+      activeSymbolEl.textContent = symbol;
+    }
+
+    // 2. Обновляем символ валюты в кнопке подачи объявления
+    const createBtnCurrencyEl = document.querySelector('.header-submit-currency-symbol');
+    if (createBtnCurrencyEl) {
+      createBtnCurrencyEl.textContent = symbol;
+    }
+
+    // 3. Обновляем все карточки с ценами (.price-val[data-base-price])
+    document.querySelectorAll('.price-val').forEach(el => {
+      const basePrice = parseFloat(el.getAttribute('data-base-price'));
+      if (!isNaN(basePrice)) {
+        el.textContent = formatFn(basePrice * rate);
+      }
+    });
+
+    // 4. Обновляем страницу деталей объявления (сутки, часы, мобильный бар)
+    const priceDaily = document.getElementById('price-daily');
+    if (priceDaily && priceDaily.getAttribute('data-base-price')) {
+      const basePrice = parseFloat(priceDaily.getAttribute('data-base-price'));
+      if (!isNaN(basePrice)) {
+        priceDaily.textContent = Math.round(basePrice * rate);
+      }
+    }
+    const priceDailyMobile = document.getElementById('price-daily-mobile');
+    if (priceDailyMobile && priceDailyMobile.getAttribute('data-base-price')) {
+      const basePrice = parseFloat(priceDailyMobile.getAttribute('data-base-price'));
+      if (!isNaN(basePrice)) {
+        priceDailyMobile.textContent = Math.round(basePrice * rate);
+      }
+    }
+    const priceHourly = document.getElementById('price-hourly');
+    if (priceHourly && priceHourly.getAttribute('data-base-price')) {
+      const basePrice = parseFloat(priceHourly.getAttribute('data-base-price'));
+      if (!isNaN(basePrice) && basePrice > 0) {
+        priceHourly.textContent = Math.round(basePrice * rate);
+      }
+    }
+    document.querySelectorAll('.details-currency-symbol, .msb-currency-symbol').forEach(symEl => {
+      symEl.textContent = symbol;
+    });
+
+    // 5. Обновляем превью карточки на карте (если открыта в каталоге)
+    if (typeof currentPreviewId !== 'undefined' && currentPreviewId !== null && typeof apartmentsData !== 'undefined') {
+      const apt = apartmentsData[currentPreviewId];
+      if (apt) {
+        const priceDayEl = document.getElementById('map-card-price-day');
+        if (priceDayEl) {
+          priceDayEl.innerText = formatFn(apt.basePrice * rate);
+        }
+        const priceHourEl = document.getElementById('map-card-price-hour');
+        if (priceHourEl) {
+          if (apt.weekendPrice > 0) {
+            priceHourEl.innerText = formatFn(apt.weekendPrice * rate);
+            priceHourEl.className = 'price-amount price-val';
+          } else {
+            priceHourEl.innerText = '—';
+            priceHourEl.className = 'price-amount no-hourly';
+          }
+        }
+      }
+    }
+
+    // 6. Обновляем метки на Яндекс.Картах (если они есть)
+    if (typeof placemarks !== 'undefined' && placemarks) {
+      const visitedList = typeof getVisitedList === 'function' ? getVisitedList() : [];
+      Object.keys(placemarks).forEach(function(id) {
+        const placemark = placemarks[id];
+        if (placemark) {
+          const basePrice = placemark.properties.get('basePrice');
+          if (typeof basePrice !== 'undefined') {
+            placemark.properties.set('price', formatFn(basePrice * rate));
+          }
+          const isVisited = visitedList.includes(Number(id));
+          placemark.properties.set('visitedClass', isVisited ? 'visited' : '');
+          const currentLayout = placemark.options.get('iconLayout');
+          if (currentLayout) {
+            placemark.options.set('iconLayout', currentLayout);
+          }
+        }
+      });
+    }
+  } catch (e) {
+    console.error('Error updating currency display', e);
+  }
+}
+
+// Автоматическая инициализация валюты при загрузке страницы
+document.addEventListener('DOMContentLoaded', function() {
+  const savedCurrency = localStorage.getItem('flatly_currency');
+  if (savedCurrency && savedCurrency !== 'BYN') {
+    const symbol = (typeof CURRENCY_SYMBOLS !== 'undefined' && CURRENCY_SYMBOLS[savedCurrency]) ? CURRENCY_SYMBOLS[savedCurrency] : savedCurrency;
+    const activeSymbolEl = document.getElementById('active-currency-symbol');
+    if (activeSymbolEl) activeSymbolEl.textContent = symbol;
+    
+    const dropdown = document.getElementById('currency-dropdown');
+    if (dropdown) {
+      dropdown.querySelectorAll('.dropdown-item').forEach(item => {
+        if (item.getAttribute('data-code') === savedCurrency) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+    }
+  }
+  updateCurrencyDisplay();
+});
+
+// Функции интерактивного выбора города
+function toggleWhereDropdown(event) {
+  event.stopPropagation();
+  const dropdown = document.getElementById('search-where-dropdown');
+  const isShow = dropdown.classList.contains('show');
+  
+  if (!isShow) {
+    const currentCity = document.getElementById('search-where-label').textContent.trim();
+    dropdown.querySelectorAll('.search-dropdown-item').forEach(item => {
+      const cityName = item.querySelector('.city-name').textContent.trim();
+      if (cityName === currentCity) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    });
+  }
+
+  closeAllSearchDropdowns();
+  if (!isShow) {
+    dropdown.classList.add('show');
+    const backdrop = document.getElementById('search-backdrop');
+    if (backdrop) backdrop.classList.add('show');
+  }
+}
+
+window.FLATLY_CITIES_SLUGS = {"\u0411\u0430\u0440\u0430\u043d\u043e\u0432\u0438\u0447\u0438":"baranovichi","\u0411\u0435\u043b\u043e\u043e\u0437\u0451\u0440\u0441\u043a":"beloozersk","\u0411\u0435\u043b\u044b\u043d\u0438\u0447\u0438":"belynychi","\u0411\u0435\u0440\u0435\u0437\u0430":"bereza","\u0411\u0435\u0440\u0451\u0437\u0430":"bereza","\u0411\u043e\u0431\u0440\u0443\u0439\u0441\u043a":"bobruysk","\u0411\u043e\u0440\u043e\u0432\u043b\u044f\u043d\u044b":"borovlyany","\u0411\u043e\u0440\u0438\u0441\u043e\u0432":"borisov","\u0411\u0440\u0430\u0433\u0438\u043d":"bragin","\u0411\u0440\u0430\u0441\u043b\u0430\u0432":"braslav","\u0411\u0440\u0435\u0441\u0442":"brest","\u0411\u0440\u0435\u0441\u0442\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c":"brestskaya-oblast","\u0412\u0435\u0440\u0445\u043d\u0435\u0434\u0432\u0438\u043d\u0441\u043a":"verkhnedvinsk","\u0412\u0438\u043b\u0435\u0439\u043a\u0430":"vileyka","\u0412\u0438\u0442\u0435\u0431\u0441\u043a":"vitebsk","\u0412\u0438\u0442\u0435\u0431\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c":"vitebskaya-oblast","\u0412\u043e\u043b\u043a\u043e\u0432\u044b\u0441\u043a":"volkovysk","\u0412\u043e\u043b\u043e\u0436\u0438\u043d":"volozhin","\u0413\u0430\u043d\u0446\u0435\u0432\u0438\u0447\u0438":"gantsevichi","\u0413\u043b\u0443\u0431\u043e\u043a\u043e\u0435":"glubokoe","\u0413\u043e\u043c\u0435\u043b\u044c":"gomel","\u0413\u043e\u043c\u0435\u043b\u044c\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c":"gomelskaya-oblast","\u0413\u043e\u0440\u043a\u0438":"gorki","\u0413\u043e\u0440\u043e\u0434\u043e\u043a":"gorodok","\u0413\u0440\u043e\u0434\u043d\u043e":"grodno","\u0413\u0440\u043e\u0434\u043d\u0435\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c":"grodnenskaya-oblast","\u0414\u0437\u0435\u0440\u0436\u0438\u043d\u0441\u043a":"dzerzhinsk","\u0414\u043e\u0431\u0440\u0443\u0448":"dobrush","\u0414\u043e\u043a\u0448\u0438\u0446\u044b":"dokshitsy","\u0414\u0440\u043e\u0433\u0438\u0447\u0438\u043d":"drogichin","\u0414\u0440\u0443\u0436\u043d\u044b\u0439":"druzhny","\u0414\u044f\u0442\u043b\u043e\u0432\u043e":"dyatlovo","\u0415\u043b\u044c\u0441\u043a":"yelsk","\u0416\u0430\u0431\u0438\u043d\u043a\u0430":"zhabinka","\u0416\u0438\u0442\u043a\u043e\u0432\u0438\u0447\u0438":"zhitkovichi","\u0416\u043b\u043e\u0431\u0438\u043d":"zhlobin","\u0416\u043e\u0434\u0438\u043d\u043e":"zhodino","\u0417\u0430\u0441\u043b\u0430\u0432\u043b\u044c":"zaslavl","\u0417\u0435\u043b\u044c\u0432\u0430":"zelva","\u0418\u0432\u0430\u043d\u043e\u0432\u043e":"ivanovo","\u0418\u0432\u0430\u0446\u0435\u0432\u0438\u0447\u0438":"ivatsevichi","\u0418\u0432\u044c\u0435":"ivye","\u041a\u0430\u043b\u0438\u043d\u043a\u043e\u0432\u0438\u0447\u0438":"kalinkovichi","\u041a\u0430\u043c\u0435\u043d\u0435\u0446":"kamenets","\u041a\u043b\u0435\u0446\u043a":"kletsk","\u041a\u043b\u0438\u043c\u043e\u0432\u0438\u0447\u0438":"klimovichi","\u041a\u043e\u0431\u0440\u0438\u043d":"kobrin","\u041a\u043e\u0440\u043c\u0430":"korma","\u041a\u043e\u0441\u0442\u044e\u043a\u043e\u0432\u0438\u0447\u0438":"kostyukovichi","\u041a\u0440\u0438\u0447\u0435\u0432":"krichev","\u041b\u0435\u043b\u044c\u0447\u0438\u0446\u044b":"lelchitsy","\u041b\u0435\u043f\u0435\u043b\u044c":"lepel","\u041b\u0438\u0434\u0430":"lida","\u041b\u043e\u0433\u043e\u0439\u0441\u043a":"logoysk","\u041b\u0443\u043d\u0438\u043d\u0435\u0446":"luninets","\u041b\u044e\u0431\u0430\u043d\u044c":"lyuban","\u041b\u044f\u0445\u043e\u0432\u0438\u0447\u0438":"lyakhovichi","\u041c\u0430\u0440\u044c\u0438\u043d\u0430 \u0413\u043e\u0440\u043a\u0430":"maryina-gorka","\u041c\u0430\u0447\u0443\u043b\u0438\u0449\u0438":"machulishchi","\u041c\u0438\u043d\u0441\u043a":"minsk","\u041c\u0438\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c":"minskaya-oblast","\u041c\u043e\u0433\u0438\u043b\u0451\u0432":"mogilev","\u041c\u043e\u0433\u0438\u043b\u0435\u0432":"mogilev","\u041c\u043e\u0433\u0438\u043b\u0435\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c":"mogilevskaya-oblast","\u041c\u043e\u0433\u0438\u043b\u0451\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c":"mogilevskaya-oblast","\u041c\u043e\u0437\u044b\u0440\u044c":"mozyr","\u041c\u0438\u043e\u0440\u044b":"miory","\u041c\u043e\u043b\u043e\u0434\u0435\u0447\u043d\u043e":"molodechno","\u041c\u043e\u0441\u0442\u044b":"mosty","\u041c\u0441\u0442\u0438\u0441\u043b\u0430\u0432\u043b\u044c":"mstislavl","\u041c\u044f\u0434\u0435\u043b\u044c":"myadel","\u041d\u0430\u0440\u043e\u0447\u044c":"naroch","\u041d\u0435\u0441\u0432\u0438\u0436":"nesvizh","\u041d\u043e\u0432\u043e\u0433\u0440\u0443\u0434\u043e\u043a":"novogrudok","\u041d\u043e\u0432\u043e\u043b\u0443\u043a\u043e\u043c\u043b\u044c":"novolukoml","\u041d\u043e\u0432\u043e\u043f\u043e\u043b\u043e\u0446\u043a":"novopolotsk","\u041e\u0440\u0448\u0430":"orsha","\u041e\u0441\u0438\u043f\u043e\u0432\u0438\u0447\u0438":"osipovichi","\u041e\u0441\u0442\u0440\u043e\u0432\u0435\u0446":"ostrovets","\u041e\u0448\u043c\u044f\u043d\u044b":"oshmyany","\u041f\u0435\u0442\u0440\u0438\u043a\u043e\u0432":"petrikov","\u041f\u0438\u043d\u0441\u043a":"pinsk","\u041f\u043e\u043b\u043e\u0446\u043a":"polotsk","\u041f\u043e\u0441\u0442\u0430\u0432\u044b":"postavy","\u041f\u0440\u0443\u0436\u0430\u043d\u044b":"pruzhany","\u0420\u0435\u0447\u0438\u0446\u0430":"rechitsa","\u0420\u043e\u0433\u0430\u0447\u0435\u0432":"rogachev","\u0420\u043e\u0433\u0430\u0447\u0451\u0432":"rogachev","\u0421\u0432\u0435\u0442\u043b\u043e\u0433\u043e\u0440\u0441\u043a":"svetlogorsk","\u0421\u0432\u0438\u0441\u043b\u043e\u0447\u044c":"svisloch","\u0421\u0435\u043d\u043d\u043e":"senno","\u0421\u043b\u043e\u043d\u0438\u043c":"slonim","\u0421\u043b\u0443\u0446\u043a":"slutsk","\u0421\u043c\u043e\u043b\u0435\u0432\u0438\u0447\u0438":"smolevichi","\u0421\u043c\u043e\u0440\u0433\u043e\u043d\u044c":"smorgon","\u0421\u043e\u043b\u0438\u0433\u043e\u0440\u0441\u043a":"soligorsk","\u0421\u0442\u0430\u0440\u044b\u0435 \u0414\u043e\u0440\u043e\u0433\u0438":"starye-dorogi","\u0421\u0442\u043e\u043b\u0431\u0446\u044b":"stolbtsy","\u0421\u0442\u043e\u043b\u0438\u043d":"stolin","\u0423\u0437\u0434\u0430":"uzda","\u0424\u0430\u043d\u0438\u043f\u043e\u043b\u044c":"fanipol","\u0425\u0430\u0442\u0435\u0436\u0438\u043d\u043e":"khatezhino","\u0425\u043e\u0439\u043d\u0438\u043a\u0438":"khoyniki","\u0425\u043e\u0442\u0438\u043c\u0441\u043a":"khotimsk","\u0427\u0430\u0443\u0441\u044b":"chausy","\u0427\u0435\u0447\u0435\u0440\u0441\u043a":"chechersk","\u0428\u043a\u043b\u043e\u0432":"shklov","\u0429\u0443\u0447\u0438\u043d":"shchuchin","\u0411\u0435\u0440\u0435\u0437\u0438\u043d\u043e":"berezino","\u0411\u0443\u0434\u0430-\u041a\u043e\u0448\u0435\u043b\u0435\u0432\u043e":"buda-koshelevo","\u0413\u043b\u0443\u0441\u043a":"glusk","\u0414\u0440\u0443\u0433\u043e\u0439":"drugoy","\u0416\u043e\u0434\u0438\u043d\u043e \u041c\u0438\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b.":"zhodino-minskaya-obl","\u041a\u0440\u0443\u043f\u043a\u0438":"krupki","\u041b\u043e\u0435\u0432":"loev","\u041b\u0443\u043d\u0438\u043d\u0435\u0446, \u041b\u0443\u043d\u0438\u043d\u0435\u0446\u043a\u0438\u0439, \u0411\u0440\u0435\u0441\u0442\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u0411\u0435\u043b\u0430\u0440\u0443\u0441\u044c":"luninets-luninetskiy-brestskaya-oblast-belarus","\u041c\u0438\u043a\u0430\u0448\u0435\u0432\u0438\u0447\u0438":"mikashevichi"};
+
+
+function navigateToTargetUrl(targetUrl) {
+  const hasCatalog = !!(document.getElementById('listings-grid') || document.querySelector('.listings'));
+  let pathname = targetUrl;
+  if (targetUrl.includes('?')) {
+    pathname = targetUrl.split('?')[0];
+  }
+  if (hasCatalog && pathname !== '/' && typeof window.loadListingsAJAX === 'function') {
+    window.loadListingsAJAX(targetUrl);
+  } else {
+    window.location.href = targetUrl;
+  }
+}
+
+function getFilterTargetUrl() {
+  const city = document.getElementById('search-where-label') ? document.getElementById('search-where-label').textContent.trim() : 'Вся Беларусь';
+  const type = typeof searchType !== 'undefined' ? searchType : 'all';
+  const rooms = typeof searchRooms !== 'undefined' ? searchRooms : 0;
+  const priceMinVal = document.getElementById('search-price-min') ? document.getElementById('search-price-min').value : '';
+  const priceMaxVal = document.getElementById('search-price-max') ? document.getElementById('search-price-max').value : '';
+  const guests = typeof searchGuestsCount !== 'undefined' ? searchGuestsCount : null;
+
+  let path = '/';
+  if (city && city !== 'Город' && city !== 'Вся Беларусь') {
+    const slug = window.FLATLY_CITIES_SLUGS ? window.FLATLY_CITIES_SLUGS[city] : null;
+    if (slug) {
+      path = '/' + slug;
+    }
+  } else {
+    if (type === 'apartments' || type === 'apartment' || type === 'all') path = '/apartments';
+    else if (type === 'cottages' || type === 'cottage') path = '/cottages';
+    else if (type === 'hourly') path = '/hourly';
+  }
+
+  const params = new URLSearchParams();
+  if (type && type !== 'all' && city && city !== 'Город' && city !== 'Вся Беларусь') {
+    params.append('type', type);
+  }
+  if (rooms > 0) {
+    params.append('rooms', rooms);
+  }
+  if (priceMinVal) {
+    params.append('price_min', priceMinVal);
+  }
+  if (priceMaxVal) {
+    params.append('price_max', priceMaxVal);
+  }
+  if (guests) {
+    params.append('guests', guests);
+  }
+
+  // Sync checkboxes if we are in catalog
+  document.querySelectorAll('.filter-checkbox-item:checked').forEach(cb => {
+    const tag = cb.getAttribute('data-tag');
+    if (tag) {
+      if (tag === 'русская баня' || tag === 'сауна') params.append('sauna', '1');
+      else if (tag === 'бассейн') params.append('pool', '1');
+      else if (tag === 'джакузи') params.append('jacuzzi', '1');
+      else if (tag === 'бесконтактное заселение') params.append('self', '1');
+    }
+  });
+
+  const queryString = params.toString();
+  return path + (queryString ? '?' + queryString : '');
+}
+
+function selectSearchWhere(city, event) {
+  if (event) event.stopPropagation();
+  document.getElementById('search-where-label').textContent = city;
+  
+  document.querySelectorAll('#search-where-dropdown .search-dropdown-item').forEach(item => {
+    const cityName = item.querySelector('.city-name').textContent.trim();
+    if (cityName === city) {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
+    }
+  });
+
+  closeAllSearchDropdowns();
+
+  const targetUrl = getFilterTargetUrl();
+  navigateToTargetUrl(targetUrl);
+}
+
+// Global search bar state variables
+if (typeof searchGuestsCount === 'undefined') {
+  var searchGuestsCount = null; // null = Любое
+}
+var searchRooms = 0;
+var searchPriceMin = '';
+var searchPriceMax = '';
+var searchType = 'all';
+
+// Функции интерактивного выбора типа в поисковой строке
+function toggleSearchTypeDropdown(event) {
+  event.stopPropagation();
+  const dropdown = document.getElementById('search-type-dropdown');
+  const isShow = dropdown.classList.contains('show');
+  
+  closeAllSearchDropdowns();
+  if (!isShow) {
+    dropdown.classList.add('show');
+    const backdrop = document.getElementById('search-backdrop');
+    if (backdrop) backdrop.classList.add('show');
+  }
+}
+
+function selectSearchType(type, labelText, event) {
+  if (event) event.stopPropagation();
+  searchType = type;
+  document.getElementById('search-type-label').textContent = labelText;
+  
+  document.querySelectorAll('#search-type-dropdown .search-dropdown-item').forEach(item => {
+    if (item.getAttribute('data-type') === type) {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
+    }
+  });
+
+  closeAllSearchDropdowns();
+
+  const targetUrl = getFilterTargetUrl();
+  navigateToTargetUrl(targetUrl);
+}
+
+// Функции интерактивного выбора комнат в поисковой строке
+function toggleSearchRoomsDropdown(event) {
+  event.stopPropagation();
+  const dropdown = document.getElementById('search-rooms-dropdown');
+  const isShow = dropdown.classList.contains('show');
+  
+  closeAllSearchDropdowns();
+  if (!isShow) {
+    dropdown.classList.add('show');
+    const backdrop = document.getElementById('search-backdrop');
+    if (backdrop) backdrop.classList.add('show');
+  }
+}
+
+function selectSearchRooms(rooms, labelText, event) {
+  if (event) event.stopPropagation();
+  searchRooms = rooms;
+  if (typeof filterBedrooms !== 'undefined') {
+    filterBedrooms = rooms;
+  }
+  document.getElementById('search-rooms-label').textContent = labelText;
+  
+  document.querySelectorAll('#search-rooms-dropdown .search-dropdown-item').forEach(item => {
+    const itemRooms = item.getAttribute('data-rooms');
+    if ((rooms === 0 && itemRooms === 'all') || parseInt(itemRooms) === rooms) {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
+    }
+  });
+
+  // Sync with modal filter room buttons
+  const btn = document.querySelector(`.filter-room-btn[data-val="${rooms}"]`);
+  if (btn) {
+    document.querySelectorAll('.filter-room-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  } else if (rooms === 0) {
+    const anyBtn = document.querySelector('.filter-room-btn[data-val="0"]');
+    if (anyBtn) {
+      document.querySelectorAll('.filter-room-btn').forEach(b => b.classList.remove('active'));
+      anyBtn.classList.add('active');
+    }
+  }
+
+  // Sync with quick filter buttons (qf-room-btn)
+  const qfBtn = document.querySelector(`.qf-room-btn[data-val="${rooms}"]`);
+  if (qfBtn) {
+    document.querySelectorAll('.qf-room-btn').forEach(b => b.classList.remove('active'));
+    qfBtn.classList.add('active');
+    const qfText = document.querySelector('#qf-pill-bedrooms span');
+    if (qfText) {
+      qfText.textContent = rooms === 0 ? 'Любое' : rooms + (rooms === 1 ? ' спальня' : (rooms <= 4 ? ' спальни' : ' спален'));
+    }
+    const qfPill = document.getElementById('qf-pill-bedrooms');
+    if (qfPill) {
+      if (rooms > 0) qfPill.classList.add('active');
+      else qfPill.classList.remove('active');
+    }
+  }
+
+  closeAllSearchDropdowns();
+
+  const targetUrl = getFilterTargetUrl();
+  navigateToTargetUrl(targetUrl);
+}
+
+// Функции интерактивного выбора цены в поисковой строке
+function toggleSearchPriceDropdown(event) {
+  event.stopPropagation();
+  const dropdown = document.getElementById('search-price-dropdown');
+  const isShow = dropdown.classList.contains('show');
+  
+  closeAllSearchDropdowns();
+  if (!isShow) {
+    dropdown.classList.add('show');
+    const backdrop = document.getElementById('search-backdrop');
+    if (backdrop) backdrop.classList.add('show');
+  }
+}
+
+function applySearchPrice(event) {
+  if (event) event.stopPropagation();
+  searchPriceMin = document.getElementById('search-price-min').value;
+  searchPriceMax = document.getElementById('search-price-max').value;
+  
+  let label = 'Любая';
+  if (searchPriceMin && searchPriceMax) {
+    label = searchPriceMin + ' - ' + searchPriceMax + ' Б̶';
+  } else if (searchPriceMin) {
+    label = 'от ' + searchPriceMin + ' Б̶';
+  } else if (searchPriceMax) {
+    label = 'до ' + searchPriceMax + ' Б̶';
+  }
+  document.getElementById('search-price-label').textContent = label;
+  
+  closeAllSearchDropdowns();
+
+  // Если мы находимся на главной странице, вызываем фильтрацию мгновенно!
+  if (typeof applyFilters === 'function') {
+    if (typeof priceMin !== 'undefined') {
+      priceMin = searchPriceMin ? parseFloat(searchPriceMin) : 0;
+    }
+    if (typeof priceMax !== 'undefined') {
+      priceMax = searchPriceMax ? parseFloat(searchPriceMax) : Infinity;
+    }
+    
+    // Синхронизируем со значениями в боковой панели / модалке фильтров
+    const sidebarMin = document.getElementById('price-min');
+    const sidebarMax = document.getElementById('price-max');
+    if (sidebarMin) sidebarMin.value = searchPriceMin;
+    if (sidebarMax) sidebarMax.value = searchPriceMax;
+    
+    applyFilters();
+  }
+}
+
+// Функции интерактивного выбора гостей
+function toggleSearchGuestsDropdown(event) {
+  event.stopPropagation();
+  const dropdown = document.getElementById('search-guests-dropdown');
+  const isShow = dropdown.classList.contains('show');
+  
+  closeAllSearchDropdowns();
+  if (!isShow) {
+    dropdown.classList.add('show');
+    const backdrop = document.getElementById('search-backdrop');
+    if (backdrop) backdrop.classList.add('show');
+  }
+}
+
+function changeSearchGuests(val, event) {
+  if (event) event.stopPropagation();
+  
+  if (searchGuestsCount === null) {
+    searchGuestsCount = val > 0 ? 1 : null;
+  } else {
+    searchGuestsCount += val;
+    if (searchGuestsCount < 1) searchGuestsCount = null;
+    if (searchGuestsCount > 10) searchGuestsCount = 10;
+  }
+
+  const labelText = searchGuestsCount === null ? 'Любое' : searchGuestsCount + ' ' + getGuestsPlural(searchGuestsCount);
+  const countText = searchGuestsCount === null ? 'Любое' : searchGuestsCount + '+';
+
+  document.getElementById('search-guests-label').textContent = labelText;
+  document.getElementById('search-guests-val').textContent = countText;
+
+  // Если мы находимся на главной странице, вызываем фильтрацию мгновенно!
+  if (typeof selectedGuests !== 'undefined' && typeof applyFilters === 'function') {
+    selectedGuests = searchGuestsCount;
+    applyFilters();
+  }
+}
+
+// Открытие модалки фильтров
+function openSearchFilterModal(event) {
+  if (event) event.stopPropagation();
+  if (typeof openFilterModal === 'function') {
+    openFilterModal();
+  } else {
+    window.location.href = '/?open_filters=1';
+  }
+}
+
+// Умный поиск по иконке лупы
+function submitSearchbar(event) {
+  if (event) event.preventDefault();
+  const targetUrl = getFilterTargetUrl();
+  navigateToTargetUrl(targetUrl);
+}
+
+
+// Склонение слова "гость"
+function getGuestsPlural(n) {
+  let plural = 'гостей';
+  if (n % 10 === 1 && n % 100 !== 11) {
+    plural = 'гость';
+  } else if (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20)) {
+    plural = 'гостя';
+  }
+  return plural;
+}
+
+// Функции Cookies баннера (Закон РБ № 99-З)
+function checkCookieConsent() {
+  const consent = localStorage.getItem('flatly_cookie_consent');
+  if (!consent) {
+    setTimeout(function() {
+      document.getElementById('cookie-banner').classList.add('show');
+    }, 1500);
+  }
+}
+function acceptCookies(status) {
+  localStorage.setItem('flatly_cookie_consent', status);
+  document.getElementById('cookie-banner').classList.remove('show');
+  showToast(status === 'accepted' ? '🍪 Cookies приняты' : 'Cookies отклонены');
+}
+function showCookieSettings() {
+  showToast('⚙️ Настройки Cookies будут доступны в личном кабинете');
+}
+
+// === Favorites Management ===
+function getFavorites() {
+  try {
+    const favs = localStorage.getItem('flatly_favorites');
+    return favs ? JSON.parse(favs).map(id => parseInt(id) || id) : [];
+  } catch (e) {
+    return [];
+  }
+}
+
+function saveFavorites(favs) {
+  try {
+    localStorage.setItem('flatly_favorites', JSON.stringify(favs));
+  } catch (e) {
+    console.error('Failed to save favorites', e);
+  }
+}
+
+function toggleFavoriteId(id) {
+  const favs = getFavorites();
+  const parsedId = parseInt(id) || id;
+  const index = favs.indexOf(parsedId);
+  let isAdded = false;
+  if (index === -1) {
+    favs.push(parsedId);
+    isAdded = true;
+  } else {
+    favs.splice(index, 1);
+  }
+  saveFavorites(favs);
+  updateFavCounter();
+  return isAdded;
+}
+
+function updateFavCounter() {
+  const counterEl = document.getElementById('header-fav-counter');
+  if (counterEl) {
+    const count = getFavorites().length;
+    counterEl.textContent = count;
+    if (count > 0) {
+      counterEl.style.display = 'flex';
+    } else {
+      counterEl.style.display = 'none';
+    }
+  }
+}
+
+function navigateToFavorites(event) {
+  if (event) event.preventDefault();
+  const favs = getFavorites();
+  window.location.href = "https://flatly.by/favorites?ids=" + favs.join(',');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  checkCookieConsent();
+  updateFavCounter();
+  
+  // Устанавливаем выбранную валюту из localStorage при загрузке
+  const currentCurrency = localStorage.getItem('flatly_currency') || 'BYN';
+  const symbol = CURRENCY_SYMBOLS[currentCurrency] || 'Б̶';
+  const symbolEl = document.getElementById('active-currency-symbol');
+  if (symbolEl) symbolEl.textContent = symbol;
+
+  // Инициализируем пересчет валюты на текущей странице, если есть функция
+  if (typeof updateCurrencyDisplay === 'function') {
+    updateCurrencyDisplay();
+  }
+
+  // Синхронизируем аватар пользователя в шапке при загрузке
+  try {
+    const profile = JSON.parse(localStorage.getItem('flatly_host_profile'));
+    if (profile && profile.avatar) {
+      const headerAvatar = document.querySelector('.nav-user .avatar');
+      if (headerAvatar) {
+        headerAvatar.innerHTML = `<img src="${profile.avatar}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">`;
+      }
+    }
+  } catch (e) {
+    console.error('Error loading avatar from local storage', e);
+  }
+
+  // Глобальный скролл-трекер для шапки сайта (добавление тени при прокрутке)
+  const topnav = document.querySelector('.topnav');
+  if (topnav) {
+    const handleScroll = () => {
+      if (window.scrollY > 15) {
+        topnav.classList.add('scrolled');
+      } else {
+        topnav.classList.remove('scrolled');
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+  }
+
+  // Скролл-трекер для скрытия/показа шапки на главной странице
+  if (document.body.classList.contains('is-home-hero')) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 150) {
+        document.body.classList.add('scrolled');
+      } else {
+        document.body.classList.remove('scrolled');
+      }
+    });
+  }
+});
+</script>
+
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTop" class="scroll-to-top-btn" aria-label="Наверх">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const scrollTopBtn = document.getElementById('scrollToTop');
+  if (scrollTopBtn) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+});
+</script>
+
+
+<!-- Floating Support Button -->
+<button class="floating-support-btn" onclick="openSupportModal()" aria-label="Поддержка">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/>
+  </svg>
+  <span>Поддержка</span>
+</button>
+
+<!-- Support Modal Backdrop -->
+<div class="support-modal-backdrop" id="support-modal" onclick="closeSupportModal()">
+  <div class="support-modal-card" onclick="event.stopPropagation()">
+    <button class="support-modal-close" onclick="closeSupportModal()" aria-label="Закрыть">×</button>
+    
+    <h2 class="support-modal-title">Поддержка</h2>
+    <p class="support-modal-subtitle">Баг, предложение или вопрос — мы читаем всё</p>
+    
+    <form id="support-form" onsubmit="submitSupportForm(event)">
+      <!-- ТИП ОБРАЩЕНИЯ -->
+      <div class="support-form-group">
+        <label class="support-form-label">Тип обращения</label>
+        <div class="support-type-buttons">
+          <input type="hidden" name="support_type" id="support-type-input" value="Предложение">
+          <button type="button" class="support-type-btn" onclick="setSupportType('Баг', this)">Баг</button>
+          <button type="button" class="support-type-btn active" onclick="setSupportType('Предложение', this)">Предложение</button>
+          <button type="button" class="support-type-btn" onclick="setSupportType('Вопрос', this)">Вопрос</button>
+        </div>
+      </div>
+      
+      <!-- ИМЯ -->
+      <div class="support-form-group">
+        <label class="support-form-label">Имя <span class="required">*</span></label>
+        <div class="support-input-wrapper">
+          <span class="support-input-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </span>
+          <input type="text" name="name" id="support-name" class="support-input-text" placeholder="Ваше имя" value="" required>
+        </div>
+      </div>
+      
+      <!-- КОНТАКТЫ ДЛЯ СВЯЗИ -->
+      <div class="support-form-group">
+        <label class="support-form-label">Контакты для связи</label>
+        
+        <div class="support-inputs-grid">
+          <!-- Телефон -->
+          <div class="support-field-wrapper">
+            <span class="support-input-icon">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </span>
+            <input type="text" name="phone" id="support-phone" class="support-input-text" placeholder="Телефон *" value="" required>
+          </div>
+          
+          <!-- Telegram -->
+          <div class="support-field-wrapper">
+            <span class="support-input-icon">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </span>
+            <input type="text" name="telegram" id="support-telegram" class="support-input-text" placeholder="Telegram (@username)" value="">
+          </div>
+          
+          <!-- Viber -->
+          <div class="support-field-wrapper">
+            <span class="support-input-icon">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </span>
+            <input type="text" name="viber" id="support-viber" class="support-input-text" placeholder="Viber" value="">
+          </div>
+          
+          <!-- WhatsApp -->
+          <div class="support-field-wrapper">
+            <span class="support-input-icon">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            </span>
+            <input type="text" name="whatsapp" id="support-whatsapp" class="support-input-text" placeholder="WhatsApp" value="">
+          </div>
+        </div>
+      </div>
+      
+      <!-- СООБЩЕНИЕ -->
+      <div class="support-form-group" style="margin-bottom: 24px;">
+        <label class="support-form-label">Сообщение <span class="required">*</span></label>
+        <textarea name="message" id="support-message" class="support-textarea" placeholder="Опишите подробнее..." required></textarea>
+      </div>
+      
+      <button type="submit" class="support-submit-btn" id="support-submit-button">Отправить</button>
+    </form>
+  </div>
+</div>
+
+<script>
+function openSupportModal() {
+  const modal = document.getElementById('support-modal');
+  if (modal) {
+    modal.style.display = 'flex';
+    // Force reflow
+    modal.offsetHeight;
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeSupportModal() {
+  const modal = document.getElementById('support-modal');
+  if (modal) {
+    modal.classList.remove('show');
+    setTimeout(() => {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }, 300);
+  }
+}
+
+function setSupportType(type, element) {
+  document.getElementById('support-type-input').value = type;
+  const buttons = document.querySelectorAll('.support-type-btn');
+  buttons.forEach(btn => btn.classList.remove('active'));
+  element.classList.add('active');
+}
+
+function submitSupportForm(event) {
+  event.preventDefault();
+  
+  const submitBtn = document.getElementById('support-submit-button');
+  if (!submitBtn) return;
+  
+  const name = document.getElementById('support-name').value.trim();
+  const phone = document.getElementById('support-phone').value.trim();
+  const message = document.getElementById('support-message').value.trim();
+  
+  if (!name || !phone || !message) {
+    if (typeof showToast === 'function') {
+      showToast('⚠️ Пожалуйста, заполните все обязательные поля');
+    } else {
+      alert('Пожалуйста, заполните все обязательные поля');
+    }
+    return;
+  }
+  
+  submitBtn.disabled = true;
+  const originalText = submitBtn.textContent;
+  submitBtn.textContent = 'Отправка...';
+  
+  const payload = {
+    type: document.getElementById('support-type-input').value,
+    name: name,
+    phone: phone,
+    telegram: document.getElementById('support-telegram').value.trim(),
+    viber: document.getElementById('support-viber').value.trim(),
+    whatsapp: document.getElementById('support-whatsapp').value.trim(),
+    message: message
+  };
+  
+  fetch('/support/send', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-TOKEN': 'hKhzvGhYgfT6sMxVpYlSDUxrTqGgXd1mW3uLq4KS',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  })
+  .then(response => {
+    return response.json().then(data => {
+      if (!response.ok) {
+        throw new Error(data.message || 'Ошибка сервера при отправке');
+      }
+      return data;
+    });
+  })
+  .then(data => {
+    if (data.success) {
+      if (typeof showToast === 'function') {
+        showToast('✅ ' + (data.message || 'Обращение отправлено!'));
+      } else {
+        alert('Обращение отправлено!');
+      }
+      
+      // Clear message field
+      document.getElementById('support-message').value = '';
+      
+      closeSupportModal();
+    } else {
+      throw new Error(data.message || 'Неизвестная ошибка');
+    }
+  })
+  .catch(err => {
+    console.error(err);
+    if (typeof showToast === 'function') {
+      showToast('❌ ' + err.message);
+    } else {
+      alert('Ошибка: ' + err.message);
+    }
+  })
+  .finally(() => {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+  });
+}
+</script>
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            (function(m,e,t,r,i,k,a){
+                m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                m[i].l=1*new Date();
+                for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+                k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+            })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107265665', 'ym');
+
+            ym(107265665, 'init', {ssr:true, webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+        }, 2500);
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/107265665" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body>
+</html>
