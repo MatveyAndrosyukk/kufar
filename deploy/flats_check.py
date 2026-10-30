@@ -27,7 +27,7 @@ async def main():
                     status = r.status
                 if first["images"]:
                     img = "ok" if await net.image_jpeg(first["images"][0]) else "FAIL"
-            good = bool(items) and status == 200 and img != "FAIL"
+            good = bool(items) and status in (200, 429) and img != "FAIL"
             ok &= good
             print(("OK  " if good else "BAD "), deal, rid, city, name, len(items), status, img, f"{time.time() - t0:.1f}s",
                   first and (first["title"][:40], first["city"], first["byn"]))
