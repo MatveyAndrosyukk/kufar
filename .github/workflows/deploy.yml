@@ -35,3 +35,9 @@ jobs:
             grep -q "^BOT_TOKEN=$BOT_TOKEN$" .env || sed -i "s|^BOT_TOKEN=.*|BOT_TOKEN=$BOT_TOKEN|" .env
             docker compose up -d
             docker compose ps
+            echo ">> Проверка: бот подключился к Telegram"
+            for i in $(seq 1 12); do docker compose logs bot 2>&1 | grep -q "Run polling" && break; sleep 5; done
+            docker compose logs --tail 30 bot
+            docker compose logs bot 2>&1 | grep -q "Run polling"
+            echo ">> Проверка: Kufar API отвечает"
+            docker compose exec -T bot python -c "import asyncio,kufar;ads=asyncio.run(kufar.search({'query':'квартира','region_id':1,'city':'Брест'}));print('KUFAR_OK',len(ads),[(a['subject'],kufar.location(a)) for a in ads[:3]])"
