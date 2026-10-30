@@ -1,0 +1,18 @@
+HTTP/2 404 
+server: openresty
+date: Fri, 30 Oct 2026 11:46:16 GMT
+content-type: text/html; charset=utf-8
+vary: Accept-Encoding
+cache-control: private, no-cache, no-store, max-age=0, must-revalidate
+etag: "n2dxjqozn779r"
+vary: Accept-Encoding
+x-xss-protection: 1; mode=block
+x-frame-options: SAMEORIGIN
+x-dns-prefetch-control: on
+x-download-options: noopen
+x-content-type-options: nosniff
+strict-transport-security: max-age=31536000; includeSubDomains
+content-security-policy: frame-ancestors 'self' *.kufar.by
+referrer-policy: strict-origin
+permissions-policy: accelerometer=(), camera=(), geolocation=(self), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+

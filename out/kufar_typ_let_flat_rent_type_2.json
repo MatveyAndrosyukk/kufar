@@ -1,0 +1,2 @@
+{"error":{"message":"search error (query rewrite phase)","details":"translation not found for 'flat_rent_type'","code":"ASR0003","http":{"code":422,"message":"Unprocessable Entity"}}}
+

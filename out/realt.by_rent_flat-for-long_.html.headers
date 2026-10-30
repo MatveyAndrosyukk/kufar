@@ -1,0 +1,18 @@
+HTTP/2 200 
+server: Tengine
+date: Fri, 30 Oct 2026 11:49:09 GMT
+content-type: text/html; charset=utf-8
+content-length: 1096788
+vary: Accept-Encoding
+x-frame-options: SAMEORIGIN
+referrer-policy: strict-origin-when-cross-origin
+permissions-policy: camera=(), microphone=(), payment=()
+x-content-type-options: nosniff
+content-security-policy: object-src 'none';    base-uri 'self';    frame-ancestors 'self' *.realt.by metrika.yandex.ru metrika.yandex.by metrica.yandex.com metrica.yandex.com.tr webvisor.com *.webvisor.com;
+cache-control: private, no-cache, no-store, max-age=0, must-revalidate
+etag: "h8vlfhw7dokxcr"
+vary: Accept-Encoding
+strict-transport-security: max-age=31536000; includeSubdomains
+set-cookie: sl-session=8aIEdrXV5WqbLuCENwmaig==; SameSite=None; Secure; Path=/; Max-Age=86400; HttpOnly
+strict-transport-security: max-age=15768000;
+
