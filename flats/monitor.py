@@ -75,7 +75,7 @@ async def check(bot: Bot, m: dict):
         try:
             await send(bot, m["chat_id"], it, title)
         except TelegramForbiddenError:
-            await db.set_active(m["id"], False)
+            log.info("chat %s: бот не запущен/заблокирован, пропускаю", m["chat_id"])
             return
         except Exception as e:  # noqa: BLE001
             log.exception("send %s: %s", it["uid"], e)

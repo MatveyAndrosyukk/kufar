@@ -55,8 +55,7 @@ async def check_monitor(bot: Bot, m: dict):
         try:
             await send_ad(bot, m["chat_id"], ad, title=title_for(m))
         except TelegramForbiddenError:
-            log.info("chat %s blocked bot, pausing monitor %s", m["chat_id"], m["id"])
-            await db.set_active(m["id"], False)
+            log.info("chat %s: бот не запущен/заблокирован, пропускаю", m["chat_id"])
             return
         except Exception as e:  # noqa: BLE001
             log.exception("send %s: %s", ad.get("ad_id"), e)

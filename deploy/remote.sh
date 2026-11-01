@@ -20,8 +20,8 @@
     test "$(cat data/.avatar_$3 2>/dev/null)" = "$H" && echo "AVATAR_OK $3"
   }
   [ -f data/.avatar ] && [ ! -f data/.avatar_kufar ] && mv data/.avatar data/.avatar_kufar
-  avatar "$BOT_TOKEN" deploy/avatar.jpg kufar
-  avatar "$FLATS_BOT_TOKEN" deploy/avatar_flats.jpg flats
+  avatar "$BOT_TOKEN" deploy/avatar.jpg "kufar_${BOT_TOKEN%%:*}"
+  avatar "$FLATS_BOT_TOKEN" deploy/avatar_flats.jpg "flats_${FLATS_BOT_TOKEN%%:*}"
 
   echo ">> Проверка: оба бота подключились к Telegram"
   for s in bot flats; do
