@@ -1,0 +1,206 @@
+>> Обновляю код...
+From https://github.com/MatveyAndrosyukk/kufar
+ * branch            master     -> FETCH_HEAD
+ + e8890e1...ae3ac0a master     -> origin/master  (forced update)
+HEAD is now at ae3ac0a Kufar-бот: новый токен, аватарка для нового бота, без автопаузы мониторингов
+>> Собираю и запускаю контейнер...
+ Image kufar-bot-bot Building 
+ Image kufar-bot-flats Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 865B done
+#1 DONE 0.0s
+
+#2 [bot internal] load build definition from Dockerfile
+#2 transferring dockerfile: 349B done
+#2 DONE 0.0s
+
+#3 [bot internal] load metadata for docker.io/library/python:3.12-slim
+#3 DONE 0.8s
+
+#4 [flats internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [bot 1/7] FROM docker.io/library/python:3.12-slim@sha256:aa943ce411423c7582288f18707ff66eddcbaeb510502d747a72aeb34f30d159
+#5 resolve docker.io/library/python:3.12-slim@sha256:aa943ce411423c7582288f18707ff66eddcbaeb510502d747a72aeb34f30d159 0.0s done
+#5 DONE 0.0s
+
+#6 [flats internal] load build context
+#6 transferring context: 7.18kB done
+#6 DONE 0.0s
+
+#7 [bot 2/7] COPY requirements.txt /requirements.txt
+#7 CACHED
+
+#8 [bot 3/7] RUN pip install --no-cache-dir -r /requirements.txt
+#8 CACHED
+
+#9 [flats 4/7] COPY app/ /app/
+#9 DONE 0.1s
+
+#10 [flats 5/7] COPY flats/ /flats/
+#10 DONE 0.1s
+
+#11 [bot 6/7] COPY deploy/flats_check.py /flats_check.py
+#11 DONE 0.1s
+
+#12 [flats 7/7] WORKDIR /app
+#12 DONE 0.0s
+
+#13 [bot] exporting to image
+#13 exporting layers
+#13 exporting layers 0.2s done
+#13 exporting manifest sha256:50cfc65e119026c9bcd17f720cbdc2d5b1297309b155c3b0a8811e3de1603cf2
+#13 exporting manifest sha256:50cfc65e119026c9bcd17f720cbdc2d5b1297309b155c3b0a8811e3de1603cf2 0.0s done
+#13 exporting config sha256:a57cf2c0e993ed18f18a2d57738b6275c6336041c1b54368c1c29fb8187275b6 0.0s done
+#13 exporting attestation manifest sha256:acb56b6bae5f9b9818dc96f07c6b0836aabb79c76490647051ad9f309423a309 0.0s done
+#13 exporting manifest list sha256:4add059dd133092f6a08ae66f854d9fa8221cc4c94fcc9e47feb2c9043e98b64
+#13 exporting manifest list sha256:4add059dd133092f6a08ae66f854d9fa8221cc4c94fcc9e47feb2c9043e98b64 0.0s done
+#13 naming to docker.io/library/kufar-bot-bot:latest done
+#13 unpacking to docker.io/library/kufar-bot-bot:latest
+#13 unpacking to docker.io/library/kufar-bot-bot:latest 0.1s done
+#13 DONE 0.5s
+
+#14 [flats] exporting to image
+#14 exporting layers 0.2s done
+#14 exporting manifest sha256:d6bd8cd6a566fb9a802cd98b7c53c38e649c7de2f474bd06ef4b78be588129fa 0.0s done
+#14 exporting config sha256:e024777f1a4bbdf43f347094f9d2b198ba037f1234a7ad10098a78774a5e588b 0.0s done
+#14 exporting attestation manifest sha256:46473f964ff8851de9d2ccd8934513969306acc1c6f7783e168789d315361da1 0.0s done
+#14 exporting manifest list sha256:c4ee13e335dd47dd218bf89bd7ce56429bbd69333d18747091e9825d958deb6c 0.0s done
+#14 naming to docker.io/library/kufar-bot-flats:latest done
+#14 unpacking to docker.io/library/kufar-bot-flats:latest 0.1s done
+#14 DONE 0.5s
+
+#15 [flats] resolving provenance for metadata file
+#15 DONE 0.0s
+
+#16 [bot] resolving provenance for metadata file
+#16 DONE 0.0s
+ Image kufar-bot-bot Built 
+ Image kufar-bot-flats Built 
+ Container kufar-bot Recreate 
+ Container flats-bot Recreate 
+ Container kufar-bot Recreated 
+ Container flats-bot Recreated 
+ Container kufar-bot Starting 
+ Container flats-bot Starting 
+ Container kufar-bot Started 
+ Container flats-bot Started 
+NAME        IMAGE             COMMAND            SERVICE   CREATED          STATUS         PORTS
+flats-bot   kufar-bot-flats   "python main.py"   flats     13 seconds ago   Up 5 seconds   
+kufar-bot   kufar-bot-bot     "python main.py"   bot       13 seconds ago   Up 6 seconds   
+>> Готово. Логи: cd /opt/kufar-bot && docker compose logs -f
+ Image kufar-bot-bot Building 
+ Image kufar-bot-flats Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 865B done
+#1 DONE 0.0s
+
+#2 [bot internal] load build definition from Dockerfile
+#2 transferring dockerfile: 349B 0.0s done
+#2 DONE 0.0s
+
+#3 [flats internal] load metadata for docker.io/library/python:3.12-slim
+#3 DONE 0.3s
+
+#4 [bot internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [bot internal] load build context
+#5 DONE 0.0s
+
+#6 [flats 1/7] FROM docker.io/library/python:3.12-slim@sha256:aa943ce411423c7582288f18707ff66eddcbaeb510502d747a72aeb34f30d159
+#6 resolve docker.io/library/python:3.12-slim@sha256:aa943ce411423c7582288f18707ff66eddcbaeb510502d747a72aeb34f30d159 0.1s done
+#6 resolve docker.io/library/python:3.12-slim@sha256:aa943ce411423c7582288f18707ff66eddcbaeb510502d747a72aeb34f30d159 0.1s done
+#6 DONE 0.1s
+
+#5 [bot internal] load build context
+#5 transferring context: 893B 0.0s done
+#5 DONE 0.0s
+
+#7 [bot 4/7] COPY app/ /app/
+#7 CACHED
+
+#8 [bot 5/7] COPY flats/ /flats/
+#8 CACHED
+
+#9 [bot 6/7] COPY deploy/flats_check.py /flats_check.py
+#9 CACHED
+
+#10 [bot 2/7] COPY requirements.txt /requirements.txt
+#10 CACHED
+
+#11 [bot 3/7] RUN pip install --no-cache-dir -r /requirements.txt
+#11 CACHED
+
+#12 [bot 7/7] WORKDIR /app
+#12 CACHED
+
+#13 [flats] exporting to image
+#13 exporting layers 0.1s done
+#13 exporting manifest sha256:d6bd8cd6a566fb9a802cd98b7c53c38e649c7de2f474bd06ef4b78be588129fa
+#13 exporting manifest sha256:d6bd8cd6a566fb9a802cd98b7c53c38e649c7de2f474bd06ef4b78be588129fa 0.0s done
+#13 exporting config sha256:e024777f1a4bbdf43f347094f9d2b198ba037f1234a7ad10098a78774a5e588b done
+#13 exporting attestation manifest sha256:0be4bb0b95be601fdabec0db935150f0fc0573667c7a7a7439c8d99f94028404 0.1s done
+#13 exporting manifest list sha256:e6bcc42803bd65051dcd1b5c176d497b0515d97fbb3699dcf7e1d3bfa3430adf
+#13 exporting manifest list sha256:e6bcc42803bd65051dcd1b5c176d497b0515d97fbb3699dcf7e1d3bfa3430adf 0.0s done
+#13 naming to docker.io/library/kufar-bot-flats:latest done
+#13 unpacking to docker.io/library/kufar-bot-flats:latest 0.0s done
+#13 DONE 0.3s
+
+#14 [bot] exporting to image
+#14 exporting layers 0.1s done
+#14 exporting manifest sha256:50cfc65e119026c9bcd17f720cbdc2d5b1297309b155c3b0a8811e3de1603cf2 0.0s done
+#14 exporting config sha256:a57cf2c0e993ed18f18a2d57738b6275c6336041c1b54368c1c29fb8187275b6 0.0s done
+#14 exporting attestation manifest sha256:d1d48173a0f63a7c7a53259f368c84d4665e783262fc4ab3993fa37b792202c2 0.1s done
+#14 exporting manifest list sha256:b0fd96a079d429f9263238b46b86e7e87da8c95154587383a26d74c0e69d074c 0.1s done
+#14 naming to docker.io/library/kufar-bot-bot:latest done
+#14 unpacking to docker.io/library/kufar-bot-bot:latest 0.0s done
+#14 DONE 0.4s
+
+#15 [flats] resolving provenance for metadata file
+#15 DONE 0.0s
+
+#16 [bot] resolving provenance for metadata file
+#16 DONE 0.0s
+ Image kufar-bot-flats Built 
+ Image kufar-bot-bot Built 
+ Container flats-bot Running 
+ Container kufar-bot Recreate 
+ Container kufar-bot Recreated 
+ Container kufar-bot Starting 
+ Container kufar-bot Started 
+NAME        IMAGE                                                                     COMMAND            SERVICE   CREATED          STATUS                  PORTS
+flats-bot   sha256:c4ee13e335dd47dd218bf89bd7ce56429bbd69333d18747091e9825d958deb6c   "python main.py"   flats     27 seconds ago   Up 19 seconds           
+kufar-bot   kufar-bot-bot                                                             "python main.py"   bot       11 seconds ago   Up Less than a second   
+AVATAR_OK kufar_9234236842
+AVATAR_OK flats_9206228028
+>> Проверка: оба бота подключились к Telegram
+kufar-bot  | 2026-11-01 14:50:27,141 INFO aiogram.dispatcher: Start polling
+kufar-bot  | 2026-11-01 14:50:27,179 INFO aiogram.dispatcher: Run polling for bot @kufaralertbot id=9234236842 - 'Объявления с Kufar'
+flats-bot  | 2026-11-01 14:50:12,464 INFO aiogram.dispatcher: Start polling
+flats-bot  | 2026-11-01 14:50:12,505 INFO aiogram.dispatcher: Run polling for bot @flattykufarbot id=9206228028 - 'Пойск квартир Беларусь'
+>> Проверка: Kufar API
+KUFAR_OK 34
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7755d9b7e630>
+Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7755d99ba570>, 175484.000604211)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7755d9b7e660>
+>> Проверка: источники бота квартир
+OK   long 1 Брест kufar 24 200 ok 1.4s ('Однокомнатная квартира на длительный сро', 'Брест', 750.0)
+OK   long 1 Брест realt 60 200 ok 0.7s ('1-комнатная квартира с ремонтом в самом ', 'Брест', 1250)
+OK   day 1 Брест realt 60 200 ok 65.4s ('Квартира', 'Брест', 146.3)
+OK   day 1 Брест flatly 4 200 ok 2.2s ('Апартаменты 28 | ЖК Чайка', 'Брест', 100.0)
+OK   sale 1 Брест kufar 43 200 ok 1.9s ('1-комнатная квартира в новостройке Восто', 'Брест', 175888.14)
+OK   sale 1 Брест realt 60 200 ok 0.7s ('Просторная 4х комнатная квартира в спаль', 'Брест', 279889)
+OK   long 7 None kufar 50 429 ok 1.0s ('Сдается евродвушка у метро Аэродромная (', 'Октябрьский', 1890.0)
+OK   long 7 None realt 90 200 ok 0.5s ('Сдаётся 1-комнатная квартира с авторским', 'Минск', 2504)
+OK   day 7 None realt 171 200 ok 1.9s ('Квартира', 'Минск', 165)
+OK   day 7 None flatly 23 200 ok 0.9s ('Уютная и чистая квартира в Чижовке.', 'Минск', 140.0)
+FLATS_OK
+>> Время ответа realt с сервера
+200 1.077526s 1127177b https://realt.by/rent/flat-for-day/
+200 0.973325s 693420b https://realt.by/brest-region/rent/flat-for-day/?sortType=createdAt
+DEPLOY_SUCCESS
