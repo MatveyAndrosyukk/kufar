@@ -1,0 +1,19 @@
+TAKEN kufarradarbot Kufar Radar
+TAKEN kufarscoutbot kufar-scout
+FREE  kufarpingbot
+FREE  kufaralertbot
+TAKEN kufarwatchbot KUFAR WatchBot — Поиск и мониторинг объявлений
+FREE  kufarhuntbot
+TAKEN kufarnotifybot kufarNotifyBot
+TAKEN kufarspybot Куфар Шпион
+TAKEN kufarfindbot KufarBot
+FREE  kufarnowbot
+TAKEN kufarfastbot kufarMonitBot
+FREE  kufarseekbot
+TAKEN kufarnewbot n
+TAKEN mykufarbot Kufar
+FREE  kufarsledbot
+TAKEN kufarlookbot Kufar search
+FREE  kufarbeepbot
+FREE  kufareyebot
+FREE  kufarhawkbot
