@@ -11,7 +11,13 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           rm -rf out; mkdir -p out
-          python3 probe_tools/realt_probe.py
-          curl -s -A "Mozilla/5.0 Chrome/129" "https://flatly.by/?type=apartments" | grep -oE 'data-city="[^"]+"' | sort | uniq -c | sort -rn > out/flatly_cities.txt
+          for n in kufarradarbot kufarscoutbot kufarpingbot kufaralertbot kufarwatchbot kufarhuntbot kufarnotifybot kufarspybot kufarfindbot kufarnowbot kufarfastbot kufarseekbot kufarnewbot mykufarbot kufarsledbot kufarlookbot kufarbeepbot kufareyebot kufarhawkbot; do
+            h=$(curl -sL -m 20 -A "Mozilla/5.0" "https://t.me/$n")
+            if echo "$h" | grep -q 'tgme_page_title'; then
+              echo "TAKEN $n $(echo "$h" | grep -o '<div class="tgme_page_title"[^<]*<span[^>]*>[^<]*' | sed 's/.*>//')" >> out/names.txt
+            else echo "FREE  $n" >> out/names.txt; fi
+            sleep 1
+          done
+          cat out/names.txt
           git config user.name probe; git config user.email probe@users.noreply.github.com
           git add out && git commit -qm "probe results" && git push
